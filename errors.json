@@ -5,7 +5,7 @@
   "queue_sync": {
     "rejected_cards": [],
     "rejected_items": [],
-    "source_commit": "3783f83eb0793fd41a2f9b78414e91b8c5437f03"
+    "source_commit": "3764c454bed9ac7f42bd806167ccbfc4aeb85a73"
   },
   "schema_version": 1
 }
