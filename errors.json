@@ -1,0 +1,11 @@
+{
+  "job_errors": [],
+  "job_errors_total": 0,
+  "lookback_days": 14.0,
+  "queue_sync": {
+    "rejected_cards": [],
+    "rejected_items": [],
+    "source_commit": null
+  },
+  "schema_version": 1
+}

@@ -1,0 +1,16 @@
+# Research queue requests for the engine (merged by python -m src.research.sync_queue).
+# Each item needs a card (hypotheses/H-NNNN.yaml here or in the engine) and an id you choose
+# (stable across edits, e.g. R-0001). Rules:
+#   - a new id is added to the engine's queue as a pending item;
+#   - changing the priority of a still-pending item is applied;
+#   - status: skipped on a still-pending item cancels it;
+#   - an id naming an engine queue item (Q-000123) reprioritises / cancels that item;
+#   - items already running or done are never changed; invalid items are rejected (errors.json).
+# Example:
+#   items:
+#     - id: R-0001
+#       card: H-0005
+#       params: {window: 126}
+#       priority: 3
+version: 1
+items: []

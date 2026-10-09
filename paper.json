@@ -1,0 +1,7 @@
+{
+  "currency": "GBP",
+  "note": "Paper trading tracker is Phase 9 (not built yet). Will hold each promoted model's paper portfolio (notional GBP 10,000) vs SPY in GBP.",
+  "portfolios": [],
+  "schema_version": 1,
+  "status": "not_built"
+}

@@ -1,0 +1,243 @@
+{
+  "banner": "Free data, survivorship biased, results not trustworthy.",
+  "counts": {
+    "eligible": 0,
+    "failed_gate1": 30,
+    "failed_holdout": 0,
+    "gate1": 0,
+    "holdout": 0,
+    "paper": 0,
+    "research": 2,
+    "retired": 0
+  },
+  "free_data": true,
+  "gate1_passes": [],
+  "gates_version": 2,
+  "holdout": {
+    "uses": 0,
+    "warn_at": 20,
+    "warning": null
+  },
+  "models": {
+    "eligible": [],
+    "failed_gate1": [
+      {
+        "family": "volatility",
+        "id": "E-000003",
+        "is_baseline": false,
+        "name": "H-0005:window=60",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000004",
+        "is_baseline": false,
+        "name": "H-0005:window=126",
+        "provisional": true
+      },
+      {
+        "family": "trend",
+        "id": "E-000005",
+        "is_baseline": false,
+        "name": "H-0007:window=100,n_holdings=40",
+        "provisional": true
+      },
+      {
+        "family": "combo",
+        "id": "E-000006",
+        "is_baseline": false,
+        "name": "H-0010:n_holdings=25",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000007",
+        "is_baseline": false,
+        "name": "H-0005:window=252",
+        "provisional": true
+      },
+      {
+        "family": "trend",
+        "id": "E-000008",
+        "is_baseline": false,
+        "name": "H-0007:window=200,n_holdings=25",
+        "provisional": true
+      },
+      {
+        "family": "trend",
+        "id": "E-000009",
+        "is_baseline": false,
+        "name": "H-0007:window=100,n_holdings=25",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000010",
+        "is_baseline": false,
+        "name": "H-0011:hysteresis_buffer=10",
+        "provisional": true
+      },
+      {
+        "family": "combo",
+        "id": "E-000011",
+        "is_baseline": false,
+        "name": "H-0010:n_holdings=40",
+        "provisional": true
+      },
+      {
+        "family": "reversal",
+        "id": "E-000012",
+        "is_baseline": false,
+        "name": "H-0006:lookback=5",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000013",
+        "is_baseline": false,
+        "name": "H-0011:hysteresis_buffer=15,rebalance_every_weeks=1",
+        "provisional": true
+      },
+      {
+        "family": "reversal",
+        "id": "E-000014",
+        "is_baseline": false,
+        "name": "H-0006:lookback=21",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000015",
+        "is_baseline": false,
+        "name": "H-0011:hysteresis_buffer=10,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "trend",
+        "id": "E-000016",
+        "is_baseline": false,
+        "name": "H-0007:window=200,n_holdings=40",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000017",
+        "is_baseline": false,
+        "name": "H-0011:hysteresis_buffer=15,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000018",
+        "is_baseline": false,
+        "name": "H-0012:window=504,n_holdings=25,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000019",
+        "is_baseline": false,
+        "name": "H-0012:window=252,n_holdings=25,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000020",
+        "is_baseline": false,
+        "name": "H-0011:hysteresis_buffer=25,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000021",
+        "is_baseline": false,
+        "name": "H-0012:window=504,n_holdings=50,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000022",
+        "is_baseline": false,
+        "name": "H-0004:skip=10,n_holdings=25,rebalance_every_weeks=1",
+        "provisional": true
+      },
+      {
+        "family": "reversal",
+        "id": "E-000023",
+        "is_baseline": false,
+        "name": "H-0006:lookback=10",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000024",
+        "is_baseline": false,
+        "name": "H-0004:skip=10,n_holdings=25,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000025",
+        "is_baseline": false,
+        "name": "H-0005:window=60,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000026",
+        "is_baseline": false,
+        "name": "H-0011:hysteresis_buffer=25,rebalance_every_weeks=1",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000027",
+        "is_baseline": false,
+        "name": "H-0005:window=126,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000028",
+        "is_baseline": false,
+        "name": "H-0004:skip=10,n_holdings=40,rebalance_every_weeks=1",
+        "provisional": true
+      },
+      {
+        "family": "volatility",
+        "id": "E-000029",
+        "is_baseline": false,
+        "name": "H-0012:window=252,n_holdings=50,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000030",
+        "is_baseline": false,
+        "name": "H-0004:skip=10,n_holdings=40,rebalance_every_weeks=4",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000031",
+        "is_baseline": false,
+        "name": "H-0004:skip=21,n_holdings=25,rebalance_every_weeks=1",
+        "provisional": true
+      },
+      {
+        "family": "momentum",
+        "id": "E-000032",
+        "is_baseline": false,
+        "name": "H-0004:skip=21,n_holdings=25,rebalance_every_weeks=4",
+        "provisional": true
+      }
+    ],
+    "failed_holdout": [],
+    "gate1": [],
+    "holdout": [],
+    "paper": [],
+    "retired": []
+  },
+  "notes": "Stages: research -> gate1 -> holdout -> paper -> eligible (failed_* = rejected). Provisional (survivorship-biased) runs are never promoted past Gate 1.",
+  "schema_version": 1
+}

@@ -1,0 +1,10 @@
+# Results repo: never commit data or secrets (the engine also refuses them before committing)
+*.parquet
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.pem
+*.key
+.env
+id_*
