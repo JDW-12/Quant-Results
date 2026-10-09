@@ -76,7 +76,42 @@
       "trials": 2
     }
   ],
-  "last_nightly_job": null,
+  "last_nightly_job": {
+    "job": "nightly",
+    "local_date": "2026-10-09",
+    "steps": [
+      {
+        "message": "memory ok: 7.64 GB headroom",
+        "name": "guard",
+        "status": "ok"
+      },
+      {
+        "message": "queue: 0 added, 0 reprioritised, 0 cancelled, 0 rejected; cards: 0 added, 0 rejected",
+        "name": "sync_queue",
+        "status": "ok"
+      },
+      {
+        "message": "placeholder: the paper tracker (Phase 9) is not built yet; nothing to refresh daily",
+        "name": "daily_refresh",
+        "status": "skipped"
+      },
+      {
+        "message": "not due: current snapshot is 0.8 days old (< 7)",
+        "name": "research_refresh",
+        "status": "skipped"
+      },
+      {
+        "message": "locked (survivorship-biased data)",
+        "name": "batch",
+        "status": "skipped"
+      },
+      {
+        "message": "gate1 --all-pending done (rc 1; 32 finished experiments)",
+        "name": "gate1",
+        "status": "ok"
+      }
+    ]
+  },
   "latest_batch": {
     "auto_enqueued": 0,
     "bandit": {
