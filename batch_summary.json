@@ -78,10 +78,10 @@
   ],
   "last_nightly_job": {
     "job": "nightly",
-    "local_date": "2026-10-09",
+    "local_date": "2026-10-10",
     "steps": [
       {
-        "message": "memory ok: 7.64 GB headroom",
+        "message": "memory ok: 7.77 GB headroom",
         "name": "guard",
         "status": "ok"
       },
@@ -96,7 +96,7 @@
         "status": "skipped"
       },
       {
-        "message": "not due: current snapshot is 0.8 days old (< 7)",
+        "message": "not due: current snapshot is 1.3 days old (< 7)",
         "name": "research_refresh",
         "status": "skipped"
       },
@@ -106,9 +106,9 @@
         "status": "skipped"
       },
       {
-        "message": "gate1 --all-pending done (rc 1; 32 finished experiments)",
+        "message": "no new finished experiments since the last run (32)",
         "name": "gate1",
-        "status": "ok"
+        "status": "skipped"
       }
     ]
   },
