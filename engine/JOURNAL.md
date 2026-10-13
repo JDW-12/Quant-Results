@@ -1,6 +1,6 @@
-# JOURNAL (latest entries, newest first)
+# JOURNAL (engine: latest code-repo entries, newest first)
 
-_Engine-generated mirror of the latest 10 entries of the code repo's JOURNAL.md. Do not edit here._
+_Engine-owned copy of the latest 10 entries of the code repo's JOURNAL.md, rewritten on every publish. Do not edit here: the researcher's journal is researcher/JOURNAL.md._
 
 ## 2026-10-08 Owner decision: objective is risk-adjusted; Gate 1 v2 pre-registered before further testing
 

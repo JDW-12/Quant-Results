@@ -1,9 +1,9 @@
-<!-- Engine-generated mirror of the code repo's STATE.md. Do not edit here. -->
+<!-- Engine-owned copy of the code repo's STATE.md, rewritten on every publish. Do not edit here: the researcher's state is researcher/STATE.md. -->
 # STATE
 
 Current state of the research system. Read at the start of every cycle, updated at the end.
 
-## Build status (2026-10-13: Phase 9 paper tracker built; 2026-10-08 owner decisions: Gate 1 v2, rebalance frequency, withholding)
+## Build status (2026-10-13: Phase 10 engine side built (results-repo ownership, researcher journal, dashboard summary); Phase 9 paper tracker built; 2026-10-08 owner decisions: Gate 1 v2, rebalance frequency, withholding)
 
 - **Owner decisions 2026-10-08 (built, see JOURNAL.md):**
   **Gate 1 v2** (`config/gates.yaml` `version: 2`, pre-registered before
@@ -144,6 +144,28 @@ Current state of the research system. Read at the start of every cycle, updated 
   repo). Nightly `daily_refresh` = live refresh + paper run (skipped when
   nothing is tracked; memory guarded only for fitted models). paper.json and
   the dashboard `paper` list are filled (schema v1, additive).
+- **Phase 10, engine side (the researcher itself is a scheduled Claude task
+  set up in claude.ai, not code here): built.** Results-repo ownership split
+  (README "Results repo", table also written to the results repo's
+  README.md): engine-owned dashboard/leaderboard/gates/paper/batch_summary/
+  errors JSON, registry + paper dumps, `engine/STATE.md`,
+  `engine/JOURNAL.md`, `README.md`, `.gitignore`; researcher-owned
+  `researcher/STATE.md`, `researcher/JOURNAL.md`, `queue.yaml`,
+  `hypotheses/*.yaml`, `researcher/notes/` (publish never writes or deletes
+  them; seeds a missing one once if it never existed). The next publish
+  removes the engine-written top-level STATE.md / JOURNAL.md once (marker
+  checked; commit message says so). Publish stages only engine paths,
+  rebases on a rejected push (max 4 pushes, never force; a rebase conflict
+  restarts from the new head). `sync_queue` mirrors new
+  `researcher/JOURNAL.md` entries (sha256, idempotent, append only) into the
+  untracked `registry/researcher_journal.md`; the family freeze reads it
+  next to JOURNAL.md (only `unfreeze:` lines count; effective date =
+  min(heading, first synced)). Malformed researcher cards/items/journal are
+  rejected into errors.json, never crash the sync (a card with an
+  unhashable family used to abort the whole sync). Gate 3 reads
+  `pending (N/13 weeks)` (status "pending", passed null) before 13 paper
+  weeks. Dashboard export gained the optional `summary` header object
+  (README "Dashboard export").
 
 ## Results so far
 
@@ -262,6 +284,20 @@ band so it becomes registry trial #1.
 
 ## Next step
 
+000000. Phase 10 engine side on the VPS: `git pull origin main`, then
+   `python -m src.ops run light` (or wait for the timer). Expect ONE publish
+   commit "... Migration (one-off): removed the engine-written top-level
+   STATE.md and JOURNAL.md ... Seeded once ...: researcher/STATE.md,
+   researcher/JOURNAL.md" in JDW-12/quant-results. Then set up the Claude
+   researcher task in claude.ai (spec Phase 10): it clones the results repo,
+   reads `README.md`, `engine/STATE.md`, `engine/JOURNAL.md`,
+   `researcher/STATE.md`, `researcher/JOURNAL.md`, the JSON files
+   (`dashboard.json` `summary` first), and writes ONLY researcher-owned
+   files (`researcher/*`, `queue.yaml`, `hypotheses/H-NNNN.yaml`), pulling
+   with rebase before it pushes. Its `unfreeze: <family> — <why>` lines
+   reach the engine through `registry/researcher_journal.md` at the next
+   light/nightly sync.
+
 00000. Phase 9 on the VPS: start paper-tracking E-000019 (low vol, vol_252d
    rank, 25 names, 4-weekly, PIT S&P 500, PROVISIONAL) as a WATCH portfolio
    (forward evidence only: it can never be promoted on free data). Exact
@@ -307,9 +343,9 @@ band so it becomes registry trial #1.
 
    Then report: snapshot size (`python -m src.data.snapshot list`), whether
    Docker was available, and the first nightly summary
-   (`logs/jobs/last_nightly.json`). Phase 10 must decide where the researcher
-   writes its own journal/state in the results repo (the engine overwrites
-   `STATE.md`/`JOURNAL.md` there with mirrors).
+   (`logs/jobs/last_nightly.json`). (Phase 10: the researcher writes
+   `researcher/STATE.md` and `researcher/JOURNAL.md`; the engine's copies
+   moved to `engine/`.)
 
 
 000. On the VPS after pulling the 2026-10-08 owner-decision commits (exact
