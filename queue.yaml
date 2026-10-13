@@ -13,4 +13,29 @@
 #       params: {window: 126}
 #       priority: 3
 version: 1
-items: []
+items:
+  - id: R-0001
+    card: H-0002
+    params: {lookback: 252, n_holdings: 25, rebalance_every_weeks: 4}
+    priority: 5
+    source: researcher
+    note: Residual momentum is the only momentum variant never run; 4-weekly to cut FX cost. Momentum has 14 trials already, so expect failure and treat any pass as suspect.
+  - id: R-0002
+    card: H-0008
+    params: {window: 126}
+    priority: 3
+    source: researcher
+    note: Untested liquidity family (diversifies the trial spread away from momentum/vol). Low prior; check capacity and turnover.
+  - id: R-0003
+    card: H-0003
+    params: {window: 252}
+    priority: 2
+    source: researcher
+    note: 52-week-high is untested; highly correlated with 12-1 momentum, so likely fails for the same reasons.
+  - id: R-0004
+    card: H-0008
+    params: {window: 63}
+    priority: 1
+    source: researcher
+    note: Shorter Amihud window, only if R-0002 shows any signal.
+
