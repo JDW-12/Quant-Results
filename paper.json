@@ -1,7 +1,149 @@
 {
+  "banner": "Free data, survivorship biased, results not trustworthy.",
+  "benchmarks": [
+    {
+      "currency": "USD",
+      "id": "spy",
+      "label": "SPY (S&P 500, USD)",
+      "ter_pct": 0.0,
+      "ticker": "SPY"
+    },
+    {
+      "currency": "USD",
+      "id": "minvol",
+      "label": "USMV (MSCI USA Min Vol, factor proxy; NOT buyable by UK retail: no KID/PRIIPs)",
+      "ter_pct": 0.0,
+      "ticker": "USMV"
+    },
+    {
+      "currency": "USD",
+      "id": "minvol_ucits",
+      "label": "UCITS min-vol ETF (owner-chosen)",
+      "ter_pct": 0.0,
+      "ticker": ""
+    }
+  ],
+  "capital_gbp": 10000.0,
   "currency": "GBP",
-  "note": "Paper trading tracker is Phase 9 (not built yet). Will hold each promoted model's paper portfolio (notional GBP 10,000) vs SPY in GBP.",
-  "portfolios": [],
+  "free_data": true,
+  "generated_at": "2026-10-13T12:40:41.281424+00:00",
+  "live_data": {
+    "failures": {},
+    "last_date": "2026-10-12",
+    "n_tickers": 509,
+    "refreshed_at": "2026-10-13T12:40:02+00:00"
+  },
+  "note": "Paper portfolios start with a notional GBP 10,000 on their start date and are filled at the next open after each Friday-close signal with full costs (fees, spread, FX per trade, 15% US dividend withholding; ETF TERs are already inside the NAV-based prices). Simulated only: no broker connection exists. Watch portfolios (e.g. provisional experiments) are tracking only: their Gate 3 / kill-rule results are informational and never change a registry stage.",
+  "portfolios": [
+    {
+      "backtest_max_dd": null,
+      "benchmarks": [
+        {
+          "excess_return": null,
+          "id": "spy",
+          "label": "SPY (S&P 500, USD)",
+          "max_dd": null,
+          "return_since_start": null,
+          "ticker": "SPY",
+          "value_gbp": null
+        },
+        {
+          "excess_return": null,
+          "id": "minvol",
+          "label": "USMV (MSCI USA Min Vol, factor proxy; NOT buyable by UK retail: no KID/PRIIPs)",
+          "max_dd": null,
+          "return_since_start": null,
+          "ticker": "USMV",
+          "value_gbp": null
+        }
+      ],
+      "capital_gbp": 10000.0,
+      "costs_gbp": {
+        "fees": 0.0,
+        "fx": 0.0,
+        "spread": 0.0,
+        "ter": 0.0,
+        "withholding": 0.0
+      },
+      "current_dd": null,
+      "drawdown_limit": null,
+      "equity": {
+        "benchmarks": {
+          "minvol": [],
+          "spy": []
+        },
+        "dates": [],
+        "strategy": []
+      },
+      "events": [
+        {
+          "date": "2026-10-13",
+          "message": "watch portfolio for E-000019 (H-0012:window=252,n_holdings=25,rebalance_every_weeks=4) starting 2026-10-13 with GBP 10,000 (provisional experiment: tracking only)",
+          "type": "added"
+        }
+      ],
+      "experiment_id": "E-000019",
+      "experiment_name": "H-0012:window=252,n_holdings=25,rebalance_every_weeks=4",
+      "first_fill_date": null,
+      "first_signal_date": null,
+      "gate3": {
+        "backtest_active_mean_weekly": -0.0001917621584426026,
+        "backtest_cost_drag_annual": 0.010827309076869098,
+        "backtest_turnover_annual": 3.058660477333491,
+        "checks": [],
+        "informational": true,
+        "live_active_mean_weekly": null,
+        "live_cost_drag_annual": null,
+        "live_turnover_annual": null,
+        "official": null,
+        "p_value": null,
+        "passed": false,
+        "t_stat": null
+      },
+      "id": "P-0001",
+      "kill": {
+        "informational": true,
+        "reasons": [
+          "no complete paper week yet"
+        ],
+        "status": "insufficient_data"
+      },
+      "kind": "watch",
+      "label": "Low vol 252d, 25 names, 4-weekly (watch, provisional)",
+      "last_mark_date": null,
+      "live_vs_backtest": {
+        "backtest": {
+          "ann_return": null,
+          "ann_vol": null,
+          "sharpe": null
+        },
+        "live": {
+          "ann_return": null,
+          "ann_vol": null,
+          "sharpe": null
+        }
+      },
+      "max_dd": null,
+      "min_weeks": 13,
+      "positions": [],
+      "provisional": true,
+      "rebalance_every_weeks": 4,
+      "recent_trades": [],
+      "return_since_start": null,
+      "rolling_ar": null,
+      "rolling_beta": null,
+      "rolling_ir": null,
+      "rolling_window_weeks": 13,
+      "stage": "failed_gate1",
+      "start_date": "2026-10-13",
+      "status": "active",
+      "target_weeks": 26,
+      "value_gbp": 10000.0,
+      "vs_minvol": null,
+      "vs_spy": null,
+      "weeks_tracked": 0
+    }
+  ],
   "schema_version": 1,
-  "status": "not_built"
+  "status": "active"
 }

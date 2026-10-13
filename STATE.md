@@ -3,7 +3,7 @@
 
 Current state of the research system. Read at the start of every cycle, updated at the end.
 
-## Build status (2026-10-08, owner decisions: Gate 1 v2 risk-adjusted, rebalance frequency, withholding)
+## Build status (2026-10-13: Phase 9 paper tracker built; 2026-10-08 owner decisions: Gate 1 v2, rebalance frequency, withholding)
 
 - **Owner decisions 2026-10-08 (built, see JOURNAL.md):**
   **Gate 1 v2** (`config/gates.yaml` `version: 2`, pre-registered before
@@ -112,12 +112,38 @@ Current state of the research system. Read at the start of every cycle, updated 
   MemAvailable+SwapFree < 3 GB or 06:30-09:00 UK; job file lock. Data
   snapshots `data/snapshots/<data_version>/` + `data/current`; prune never
   deletes a snapshot referenced by the registry or the holdout log. Results
-  repo `JDW-12/quant-results` gets dashboard, leaderboard, gates, paper
-  (placeholder), batch summary (incl. lock status), registry dump, STATE,
-  JOURNAL, errors; idempotent; results key only. The researcher's
+  repo `JDW-12/quant-results` gets dashboard, leaderboard, gates, paper,
+  batch summary (incl. lock status), registry dump, paper dump, STATE,
+  JOURNAL, errors; idempotent (volatile fields `generated_at` /
+  `source_commit` never make a commit: fixes the light job committing
+  errors.json on every run); results key only. The researcher's
   `queue.yaml` and `hypotheses/` there are merged/validated into the local
-  queue and cards. Daily paper-data refresh: placeholder (Phase 9).
-- Phase 9 onward (paper tracker): not started.
+  queue and cards.
+- **Phase 9 (paper trading tracker): built, not yet run on the VPS.**
+  `src/paper` (`python -m src.paper add|refresh|run|daily|list|status|stop`),
+  `src/data/live.py`, `config/paper.yaml`. Two kinds: `gated` (started
+  automatically for a Gate 2 pass, holdout -> paper; kill rules retire,
+  Gate 3 -> eligible, all logged) and `watch` (added by the owner, e.g. a
+  provisional experiment; Gate 3 / kill rules informational only, never a
+  stage change). GBP 10,000 each from the start date (today or later);
+  benchmark portfolios SPY and USMV (factor proxy, not buyable by UK retail;
+  TERs already inside the NAV-based prices, so `ter_pct` 0) plus an optional, empty-by-default UCITS min-vol
+  ticker. Friday-close signals on data truncated at the close, next-open
+  fills with the backtester's CostModel and band, rebalance every k weeks
+  from the first signal, daily marks in USD/GBP, idempotent catch-up.
+  Gate 3 / kill rules / rolling IR and AR use performance series that
+  start from the close of each portfolio's first fill day (strategy and
+  benchmarks alike): the one-off entry cost is not a weekly return (it was
+  a false kill trigger for a closely tracking book) and the initial
+  build-out is not annualised in the Gate 3 turnover / cost rule; it stays
+  in the return since start and the cost totals.
+  Live store `data/live` (last ~3 years), outside every research snapshot
+  and data version; `load()` refuses it; live MarketData cannot be
+  backtested or labelled; no performance before a start date (DB triggers).
+  Append-only `registry/paper.db` (+ `paper_dump.jsonl` in the results
+  repo). Nightly `daily_refresh` = live refresh + paper run (skipped when
+  nothing is tracked; memory guarded only for fitted models). paper.json and
+  the dashboard `paper` list are filled (schema v1, additive).
 
 ## Results so far
 
@@ -235,6 +261,28 @@ band so it becomes registry trial #1.
   pre-publication column is empty. Only H-0002 gets a real pre/post split.
 
 ## Next step
+
+00000. Phase 9 on the VPS: start paper-tracking E-000019 (low vol, vol_252d
+   rank, 25 names, 4-weekly, PIT S&P 500, PROVISIONAL) as a WATCH portfolio
+   (forward evidence only: it can never be promoted on free data). Exact
+   commands: README "Phase 9", "Owner steps on the VPS":
+
+   ```bash
+   cd ~/quant-research && git pull origin main && source .venv/bin/activate && pip install -e .
+   python -m src.paper add --experiment E-000019 --label "Low vol 252d, 25 names, 4-weekly, PIT S&P 500 (watch, provisional)"
+   python -m src.paper refresh && python -m src.paper run && python -m src.paper status
+   python -m src.export.publish
+   ```
+
+   Added on Tue 2026-10-13 -> first signal Fri 2026-10-16 close -> filled at
+   the Mon 2026-10-19 open -> recorded by the Tue 2026-10-20 ~01:15 nightly
+   run; rebalances every 4 weeks (2026-11-13, 2026-12-11, 2027-01-08 ...);
+   13 paper weeks on 2027-01-15, 26 on 2027-04-16. Report back: the first
+   `refresh` line (tickers / coverage / last date) and, after 2026-10-20,
+   `python -m src.paper status`. Optionally choose a UCITS min-vol ETF the
+   owner can buy and fill `minvol_ucits` in `config/paper.yaml` (Yahoo
+   ticker, currency; ter_pct stays 0) BEFORE adding the portfolio (benchmarks are fixed
+   at add time).
 
 0000. Phase 8 deployment on the VPS (full owner steps: README "Phase 8",
    "Deployment: owner steps on the VPS"). In short:
