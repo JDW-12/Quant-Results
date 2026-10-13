@@ -24,7 +24,7 @@ Both repos are attached to this routine as sources: JDW-12/quant-results (you wr
 5. Rewrite researcher/STATE.md (short: current beliefs, open questions, what to check next run, pending queue ids).
 6. Commit ONLY researcher-owned files (researcher/STATE.md, researcher/JOURNAL.md, researcher/notes/, queue.yaml, hypotheses/*.yaml). Then `git pull --rebase origin main` and `git push origin main`; on rejection pull --rebase and retry up to 3 times; never force-push.
 
-## Refresh the dashboard
+## Refresh the dashboard (do this LAST, after your commit is pushed, so the dashboard includes your journal entry)
 Artifact: https://claude.ai/artifact/5bZZp2riS28RLQi6U3qY3F (a Dashboard-type artifact; its datasets are attached JSON files).
 1. From the quant-results checkout: `python3 researcher/tools/build_dashboard_tables.py` (writes researcher/dash/*.json, gitignored).
 2. Read the artifact first with the Artifact tool (action "read"), then list its `datasets` collection with the ArtifactData tool (action "list"; load it with ToolSearch if needed) to get each document's `source.url` and `version`.
@@ -32,4 +32,4 @@ Artifact: https://claude.ai/artifact/5bZZp2riS28RLQi6U3qY3F (a Dashboard-type ar
 4. If any step fails, say so in your final message and note it in researcher/STATE.md; never invent data.
 
 ## Final message
-5 to 10 lines: what changed in the results, cards and queue items added (ids), anything the owner must act on (for example "run a manual batch for R-0003 to R-0005"), and whether the dashboard refresh succeeded.
+5 to 10 lines: what changed in the results, cards and queue items added (ids), anything the owner must act on (for the queue, give the exact VPS commands: `python -m src.research.sync_queue` then `python -m src.research.batch --allow-biased-data --researcher-only --max-experiments N`), and whether the dashboard refresh succeeded.
