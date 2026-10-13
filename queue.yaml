@@ -13,4 +13,58 @@
 #       params: {window: 126}
 #       priority: 3
 version: 1
-items: []
+items:
+  - id: R-0001
+    card: H-0013
+    params: {window: 252, n_holdings: 25, rebalance_every_weeks: 4}
+    priority: 60
+    source: researcher
+    note: "low idio-vol; n=35 is the plateau check vs the 25/50 split seen for H-0012"
+  - id: R-0002
+    card: H-0013
+    params: {window: 252, n_holdings: 35, rebalance_every_weeks: 4}
+    priority: 80
+    source: researcher
+    note: "low idio-vol; n=35 is the plateau check vs the 25/50 split seen for H-0012"
+  - id: R-0003
+    card: H-0013
+    params: {window: 504, n_holdings: 25, rebalance_every_weeks: 4}
+    priority: 60
+    source: researcher
+    note: "low idio-vol; n=35 is the plateau check vs the 25/50 split seen for H-0012"
+  - id: R-0004
+    card: H-0013
+    params: {window: 504, n_holdings: 35, rebalance_every_weeks: 4}
+    priority: 80
+    source: researcher
+    note: "low idio-vol; n=35 is the plateau check vs the 25/50 split seen for H-0012"
+  - id: R-0005
+    card: H-0014
+    params: {window: 252, n_holdings: 25, rebalance_every_weeks: 4}
+    priority: 50
+    source: researcher
+    note: "low beta (BAB mechanism), slow rebalance"
+  - id: R-0006
+    card: H-0014
+    params: {window: 252, n_holdings: 35, rebalance_every_weeks: 4}
+    priority: 40
+    source: researcher
+    note: "low beta (BAB mechanism), slow rebalance"
+  - id: R-0007
+    card: H-0014
+    params: {window: 504, n_holdings: 25, rebalance_every_weeks: 4}
+    priority: 50
+    source: researcher
+    note: "low beta (BAB mechanism), slow rebalance"
+  - id: R-0008
+    card: H-0014
+    params: {window: 504, n_holdings: 35, rebalance_every_weeks: 4}
+    priority: 40
+    source: researcher
+    note: "low beta (BAB mechanism), slow rebalance"
+  - id: R-0009
+    card: H-0008
+    params: {window: 126}
+    priority: -100
+    source: researcher
+    note: "untested family (liquidity); low prior, low priority"

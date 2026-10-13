@@ -1,0 +1,36 @@
+id: H-0014
+family: volatility
+title: Low-beta stocks, held slowly, earn more than their market risk implies
+rationale: >
+  Betting against beta is the specific mechanism behind the low-vol anomaly:
+  leverage-constrained and benchmark-hugging investors buy high-beta stocks
+  instead of levering low-beta ones, flattening the security market line.
+  The earlier low-vol results are partly a beta tilt, so a pure low-beta book
+  is the cleanest test of the claimed mechanism. Betas are estimated over long
+  windows and move slowly, so a 4-weekly rebalance should keep turnover and
+  FX costs low.
+mechanism: >
+  Leverage constraints and tracking-error limits push demand to high-beta
+  stocks; the arbitrage (long low beta, levered) needs leverage that the
+  constrained cannot supply.
+expected_sign: positive
+parameters:
+  window: [252, 504]
+  n_holdings: [25, 35]
+  rebalance_every_weeks: [4]
+bind:
+  window: beta_252d.window
+strategy:
+  signals: [beta_252d]
+  portfolio: {n_holdings: 25, weighting: equal}
+prior_plausibility: medium
+source: literature
+publication_year: 2014
+notes: >
+  Frazzini & Pedersen (2014, J. Financial Economics). Written 2026-10-13. A
+  low-beta book has a tiny CAPM beta by construction, so the appraisal ratio
+  (Gate 1 v2) is the right metric, but its factor alpha will again overlap with
+  the known low-vol/quality exposure (FF5 + momentum has no BAB factor). Highly
+  correlated with the other low-vol trials, so passing is weak evidence; failing
+  would hurt the mechanism story. Beta estimates are noisy for individual
+  names. Adds 4 trials to the volatility family.

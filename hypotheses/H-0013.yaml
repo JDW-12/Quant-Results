@@ -1,0 +1,37 @@
+id: H-0013
+family: volatility
+title: Low idiosyncratic volatility with slow rebalancing, as a check on the low-vol plateau
+rationale: >
+  The low-volatility result so far rests on one signal (total volatility) and is
+  sharp in breadth: 25 names gave an appraisal ratio of about 0.7 but 50 names
+  gave about 0.45, which looks like a concentration artefact rather than a
+  plateau. Idiosyncratic volatility strips out market beta, so a book ranked on
+  it is not simply a low-beta book. Arbitrage against high idiosyncratic risk
+  is costly, because the residual risk cannot be hedged, so overpricing of
+  high idio-vol (lottery-like) stocks persists. If the effect is real it should
+  survive this change of signal and a middling breadth of 35 names.
+mechanism: >
+  Investors who cannot diversify fully, plus retail lottery preferences, overpay
+  for high idiosyncratic volatility; arbitrageurs avoid the unhedgeable residual
+  risk, so the mispricing is not competed away quickly.
+expected_sign: positive
+parameters:
+  window: [252, 504]
+  n_holdings: [25, 35]
+  rebalance_every_weeks: [4]
+bind:
+  window: idio_vol_252d.window
+strategy:
+  signals: [idio_vol_252d]
+  portfolio: {n_holdings: 25, weighting: equal}
+prior_plausibility: medium
+source: literature
+publication_year: 2006
+notes: >
+  Ang, Hodrick, Xing & Zhang (2006, J. Finance). Written 2026-10-13 after the
+  H-0012 results: 25 names passed no gate and 50 names was clearly weaker, so
+  the n_holdings 35 point is a plateau check. Strongly correlated with E-000019,
+  so a good result here is NOT independent evidence; only a failure is
+  informative (it would say the low-vol result is a total-vol or concentration
+  artefact). Adds 4 trials to the volatility family. Survivorship bias flatters
+  low-risk stocks. The 4-weekly rebalance keeps FX cost small.
