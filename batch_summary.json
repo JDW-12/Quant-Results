@@ -3,13 +3,14 @@
   "counters": {
     "by_family": {
       "combo": 2,
-      "momentum": 14,
+      "liquidity": 1,
+      "momentum": 19,
       "reversal": 3,
       "trend": 4,
-      "volatility": 9
+      "volatility": 17
     },
     "failed_trials": 0,
-    "total_trials": 32
+    "total_trials": 46
   },
   "data": {
     "current_snapshot": "775d7a27a2938432",
@@ -29,6 +30,40 @@
   },
   "free_data": true,
   "history": [
+    {
+      "allocation": {
+        "volatility": 5
+      },
+      "batch_id": "B-20261013-140219",
+      "date": "2026-10-13",
+      "duration_min": 1.9,
+      "exploration_share": 0.4,
+      "failures": 0,
+      "frozen_families": [],
+      "mode": "manual",
+      "planned": 5,
+      "provisional": true,
+      "skipped": 0,
+      "trials": 5
+    },
+    {
+      "allocation": {
+        "liquidity": 1,
+        "momentum": 5,
+        "volatility": 3
+      },
+      "batch_id": "B-20261013-135050",
+      "date": "2026-10-13",
+      "duration_min": 3.23,
+      "exploration_share": 0.333333,
+      "failures": 0,
+      "frozen_families": [],
+      "mode": "manual",
+      "planned": 9,
+      "provisional": true,
+      "skipped": 0,
+      "trials": 9
+    },
     {
       "allocation": {
         "momentum": 11,
@@ -116,16 +151,13 @@
     "auto_enqueued": 0,
     "bandit": {
       "allocation": {
-        "momentum": 11,
-        "reversal": 2,
-        "trend": 1,
-        "volatility": 6
+        "volatility": 5
       },
-      "exploration_share": 0.3,
+      "exploration_share": 0.4,
       "exploration_shortfall": 0,
-      "exploration_slots": 6,
+      "exploration_slots": 2,
       "frozen_skipped": [],
-      "n_slots": 20,
+      "n_slots": 5,
       "posteriors": {
         "combo": {
           "alpha": 1.0,
@@ -133,369 +165,131 @@
           "mean": 0.25,
           "n": 2
         },
-        "momentum": {
-          "alpha": 1.0917209333786602,
-          "beta": 3.90827906662134,
-          "mean": 0.21834418667573202,
-          "n": 3
-        },
-        "reversal": {
+        "liquidity": {
           "alpha": 1.0,
           "beta": 2.0,
           "mean": 0.3333333333333333,
           "n": 1
         },
-        "trend": {
+        "momentum": {
+          "alpha": 1.0917209333786602,
+          "beta": 19.90827906662134,
+          "mean": 0.05198671111326953,
+          "n": 19
+        },
+        "reversal": {
           "alpha": 1.0,
           "beta": 4.0,
           "mean": 0.2,
           "n": 3
         },
-        "volatility": {
+        "trend": {
           "alpha": 1.0,
-          "beta": 4.0,
-          "mean": 0.2,
-          "n": 3
+          "beta": 5.0,
+          "mean": 0.16666666666666666,
+          "n": 4
+        },
+        "volatility": {
+          "alpha": 1.112942008073401,
+          "beta": 12.8870579919266,
+          "mean": 0.07949585771952863,
+          "n": 12
         }
       },
       "selected": [
         {
-          "card": "H-0011",
+          "card": "H-0013",
           "exploration_reasons": [
             "under_explored_family"
           ],
-          "family": "momentum",
-          "priority": 3.0,
-          "queue_id": "Q-000014",
+          "family": "volatility",
+          "priority": 60.0,
+          "queue_id": "Q-000050",
           "role": "exploration"
         },
         {
-          "card": "H-0006",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "reversal",
-          "priority": 1.0,
-          "queue_id": "Q-000006",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0011",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 3.0,
-          "queue_id": "Q-000027",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0007",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "trend",
-          "priority": 2.0,
-          "queue_id": "Q-000012",
-          "role": "exploration"
-        },
-        {
-          "card": "H-0011",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 3.0,
-          "queue_id": "Q-000029",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0012",
+          "card": "H-0014",
           "exploration_reasons": [
             "untested_hypothesis",
             "under_explored_family"
           ],
           "family": "volatility",
-          "priority": 2.0,
-          "queue_id": "Q-000018",
+          "priority": 50.0,
+          "queue_id": "Q-000054",
           "role": "exploitation"
         },
         {
-          "card": "H-0012",
+          "card": "H-0014",
           "exploration_reasons": [
             "untested_hypothesis",
             "under_explored_family"
           ],
           "family": "volatility",
-          "priority": 2.0,
-          "queue_id": "Q-000016",
+          "priority": 40.0,
+          "queue_id": "Q-000053",
+          "role": "exploitation"
+        },
+        {
+          "card": "H-0014",
+          "exploration_reasons": [
+            "untested_hypothesis",
+            "under_explored_family"
+          ],
+          "family": "volatility",
+          "priority": 50.0,
+          "queue_id": "Q-000052",
           "role": "exploration"
         },
         {
-          "card": "H-0011",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 3.0,
-          "queue_id": "Q-000031",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0012",
+          "card": "H-0014",
           "exploration_reasons": [
             "untested_hypothesis",
             "under_explored_family"
           ],
           "family": "volatility",
-          "priority": 2.0,
-          "queue_id": "Q-000019",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0004",
-          "exploration_reasons": [
-            "untested_hypothesis",
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 2.0,
-          "queue_id": "Q-000032",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0006",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "reversal",
-          "priority": 1.0,
-          "queue_id": "Q-000005",
-          "role": "exploration"
-        },
-        {
-          "card": "H-0004",
-          "exploration_reasons": [
-            "untested_hypothesis",
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 2.0,
-          "queue_id": "Q-000033",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0005",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "volatility",
-          "priority": 2.0,
-          "queue_id": "Q-000021",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0011",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 3.0,
-          "queue_id": "Q-000015",
-          "role": "exploration"
-        },
-        {
-          "card": "H-0005",
-          "exploration_reasons": [
-            "under_explored_family"
-          ],
-          "family": "volatility",
-          "priority": 2.0,
-          "queue_id": "Q-000023",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0004",
-          "exploration_reasons": [
-            "untested_hypothesis",
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 2.0,
-          "queue_id": "Q-000034",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0012",
-          "exploration_reasons": [
-            "untested_hypothesis",
-            "under_explored_family"
-          ],
-          "family": "volatility",
-          "priority": 2.0,
-          "queue_id": "Q-000017",
-          "role": "exploration"
-        },
-        {
-          "card": "H-0004",
-          "exploration_reasons": [
-            "untested_hypothesis",
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 2.0,
-          "queue_id": "Q-000035",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0004",
-          "exploration_reasons": [
-            "untested_hypothesis",
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 2.0,
-          "queue_id": "Q-000036",
-          "role": "exploitation"
-        },
-        {
-          "card": "H-0004",
-          "exploration_reasons": [
-            "untested_hypothesis",
-            "under_explored_family"
-          ],
-          "family": "momentum",
-          "priority": 2.0,
-          "queue_id": "Q-000037",
+          "priority": 40.0,
+          "queue_id": "Q-000055",
           "role": "exploitation"
         }
       ],
       "thompson_draws": [
         {
-          "chosen": "reversal",
+          "chosen": "volatility",
           "draws": {
-            "momentum": 0.070833,
-            "reversal": 0.10284,
-            "volatility": 0.028143
+            "volatility": 0.108685
           },
           "slot": 0
         },
         {
-          "chosen": "momentum",
+          "chosen": "volatility",
           "draws": {
-            "momentum": 0.331823,
-            "volatility": 0.245893
+            "volatility": 0.045681
           },
           "slot": 1
         },
         {
-          "chosen": "momentum",
+          "chosen": "volatility",
           "draws": {
-            "momentum": 0.265809,
-            "volatility": 0.170579
+            "volatility": 0.17804
           },
           "slot": 2
-        },
-        {
-          "chosen": "volatility",
-          "draws": {
-            "momentum": 0.040787,
-            "volatility": 0.17895
-          },
-          "slot": 3
-        },
-        {
-          "chosen": "momentum",
-          "draws": {
-            "momentum": 0.27329,
-            "volatility": 0.255398
-          },
-          "slot": 4
-        },
-        {
-          "chosen": "volatility",
-          "draws": {
-            "momentum": 0.018373,
-            "volatility": 0.078462
-          },
-          "slot": 5
-        },
-        {
-          "chosen": "momentum",
-          "draws": {
-            "momentum": 0.212049,
-            "volatility": 0.067603
-          },
-          "slot": 6
-        },
-        {
-          "chosen": "momentum",
-          "draws": {
-            "momentum": 0.080689,
-            "volatility": 0.026514
-          },
-          "slot": 7
-        },
-        {
-          "chosen": "volatility",
-          "draws": {
-            "momentum": 0.032295,
-            "volatility": 0.032356
-          },
-          "slot": 8
-        },
-        {
-          "chosen": "volatility",
-          "draws": {
-            "momentum": 0.208703,
-            "volatility": 0.500868
-          },
-          "slot": 9
-        },
-        {
-          "chosen": "momentum",
-          "draws": {
-            "momentum": 0.325422
-          },
-          "slot": 10
-        },
-        {
-          "chosen": "momentum",
-          "draws": {
-            "momentum": 0.20156
-          },
-          "slot": 11
-        },
-        {
-          "chosen": "momentum",
-          "draws": {
-            "momentum": 0.207407
-          },
-          "slot": 12
-        },
-        {
-          "chosen": "momentum",
-          "draws": {
-            "momentum": 0.107316
-          },
-          "slot": 13
         }
       ]
     },
-    "batch_id": "B-20261008-204839",
+    "batch_id": "B-20261013-140219",
     "budgets": {
-      "effective_max_experiments": 20,
+      "effective_max_experiments": 5,
       "family_freeze_trials": 200,
       "jobs": 1,
-      "max_experiments": 20,
+      "max_experiments": 5,
       "max_hours": 6.0,
       "min_exploration_share": 0.3,
       "sensitivity": false
     },
     "cache": {
-      "baseline_hits": 53,
-      "signal_hits": 10318,
-      "signal_misses": 9380
+      "baseline_hits": 10,
+      "signal_hits": 1876,
+      "signal_misses": 3752
     },
     "crashed": 0,
     "data": {
@@ -503,15 +297,15 @@
       "end": "2022-12-31",
       "n_tickers": 644,
       "provider": "yfinance",
-      "source": "/home/ubuntu/quant-research/data/MANIFEST.json",
+      "source": "/home/ubuntu/quant-research/data/snapshots/775d7a27a2938432/MANIFEST.json",
       "start": "2005-01-01",
       "survivorship_free": false,
       "synthetic": false,
       "universe_mode": "pit_sp500"
     },
     "dry_run": false,
-    "duration_min": 5.456,
-    "ended_at": "2026-10-08T20:54:06.956072+00:00",
+    "duration_min": 1.897,
+    "ended_at": "2026-10-13T14:04:13.024608+00:00",
     "failures": 0,
     "family_budgets": {
       "combo": {
@@ -523,13 +317,22 @@
         "trials": 2,
         "unfreezes_used": []
       },
+      "liquidity": {
+        "budget_left": 199,
+        "family": "liquidity",
+        "frozen": false,
+        "frozen_since": null,
+        "gate1_passes": 0,
+        "trials": 1,
+        "unfreezes_used": []
+      },
       "momentum": {
-        "budget_left": 186,
+        "budget_left": 181,
         "family": "momentum",
         "frozen": false,
         "frozen_since": null,
         "gate1_passes": 0,
-        "trials": 14,
+        "trials": 19,
         "unfreezes_used": []
       },
       "reversal": {
@@ -551,30 +354,30 @@
         "unfreezes_used": []
       },
       "volatility": {
-        "budget_left": 191,
+        "budget_left": 183,
         "family": "volatility",
         "frozen": false,
         "frozen_since": null,
         "gate1_passes": 0,
-        "trials": 9,
+        "trials": 17,
         "unfreezes_used": []
       }
     },
     "frozen_families": [],
     "gate1": {
-      "evaluated": 20,
+      "evaluated": 5,
       "passed": 0,
       "promoted": 0
     },
     "invalid_cards": {},
     "lock": {
       "allowed": true,
-      "max_experiments": 20,
-      "message": "manual batch on survivorship-biased data (yfinance): 20 experiments max; every registry entry is tagged PROVISIONAL and will not be promoted past Gate 1.",
+      "max_experiments": 5,
+      "message": "manual batch on survivorship-biased data (yfinance): 5 experiments max; every registry entry is tagged PROVISIONAL and will not be promoted past Gate 1.",
       "mode": "manual",
       "provenance": {
         "provider": "yfinance",
-        "source": "/home/ubuntu/quant-research/data/MANIFEST.json",
+        "source": "/home/ubuntu/quant-research/data/snapshots/775d7a27a2938432/MANIFEST.json",
         "survivorship_free": false,
         "synthetic": false,
         "universe_mode": "pit_sp500"
@@ -583,324 +386,19 @@
     },
     "mode": "manual",
     "mutations_proposed": 0,
-    "n_trials": 20,
-    "planned": 20,
+    "n_trials": 5,
+    "planned": 5,
     "provisional": true,
-    "seed": 20261008,
-    "skipped": [
-      {
-        "card": "H-0005",
-        "queue_id": "Q-000020",
-        "reason": "skipped: identical strategy already in the registry on universe pit_sp500 as E-000003 (status ok); set rerun: true and rerun_reason to run it again on purpose"
-      },
-      {
-        "card": "H-0005",
-        "queue_id": "Q-000022",
-        "reason": "skipped: identical strategy already in the registry on universe pit_sp500 as E-000004 (status ok); set rerun: true and rerun_reason to run it again on purpose"
-      },
-      {
-        "card": "H-0005",
-        "queue_id": "Q-000024",
-        "reason": "skipped: identical strategy already in the registry on universe pit_sp500 as E-000007 (status ok); set rerun: true and rerun_reason to run it again on purpose"
-      },
-      {
-        "card": "H-0005",
-        "queue_id": "Q-000025",
-        "reason": "skipped: duplicate of queue item Q-000016 in the same queue"
-      },
-      {
-        "card": "H-0011",
-        "queue_id": "Q-000026",
-        "reason": "skipped: identical strategy already in the registry on universe pit_sp500 as E-000010 (status ok); set rerun: true and rerun_reason to run it again on purpose"
-      },
-      {
-        "card": "H-0011",
-        "queue_id": "Q-000028",
-        "reason": "skipped: duplicate of queue item Q-000014 in the same queue"
-      },
-      {
-        "card": "H-0011",
-        "queue_id": "Q-000030",
-        "reason": "skipped: duplicate of queue item Q-000015 in the same queue"
-      }
-    ],
-    "started_at": "2026-10-08T20:48:39.625403+00:00",
+    "seed": 20261013,
+    "skipped": [],
+    "started_at": "2026-10-13T14:02:19.233712+00:00",
     "stopped_reason": null,
     "trials": [
       {
-        "card": "H-0011",
-        "duration_s": 33.3,
-        "experiment_id": "E-000013",
+        "card": "H-0013",
+        "duration_s": 39.89,
+        "experiment_id": "E-000042",
         "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.33840278420542574,
-          "ar_spy": -0.2810472702115427,
-          "beta_spy": 1.0921909146213207,
-          "composite": 0.0,
-          "cost_drag": 0.019049437131910592,
-          "dsr": 0.0016191642205625745,
-          "ir_ew": -0.2560034749701294,
-          "ir_spy": -0.18266199880460937,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.4383461257801032,
-          "turnover": 7.49825244347274
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "queue_id": "Q-000014",
-        "role": "exploration",
-        "status": "ok",
-        "strategy": "H-0011:hysteresis_buffer=15,rebalance_every_weeks=1"
-      },
-      {
-        "card": "H-0006",
-        "duration_s": 18.44,
-        "experiment_id": "E-000014",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "reversal",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "beats_momentum_12_1",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.7858299923681055,
-          "ar_spy": -0.6537559751670962,
-          "beta_spy": 1.3237162101140971,
-          "composite": 0.0,
-          "cost_drag": 0.11950320084897852,
-          "dsr": 1.8711392153045084e-06,
-          "ir_ew": -0.4814268842292536,
-          "ir_spy": -0.36888142166912513,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.22732157067796852,
-          "turnover": 50.066544670989984
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.028666831958167993,
-            "ir_ew": -0.4814268842292536,
-            "ir_spy": -0.36888142166912513,
-            "n_days": 3523,
-            "sharpe": 0.22732157067796852
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1990,
-          "split_date": "1991-01-01"
-        },
-        "queue_id": "Q-000006",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0006:lookback=21"
-      },
-      {
-        "card": "H-0011",
-        "duration_s": 12.36,
-        "experiment_id": "E-000015",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.4209643037775733,
-          "ar_spy": -0.3604831671604126,
-          "beta_spy": 1.1078383616309118,
-          "composite": 0.0,
-          "cost_drag": 0.016211507387014167,
-          "dsr": 0.00045185351754944823,
-          "ir_ew": -0.3189286090717559,
-          "ir_spy": -0.2445033712433049,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.4012634797214149,
-          "turnover": 6.259688411705997
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "queue_id": "Q-000027",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0011:hysteresis_buffer=10,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0007",
-        "duration_s": 17.98,
-        "experiment_id": "E-000016",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "trend",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.6279844020884335,
-          "ar_spy": -0.5223729894977562,
-          "beta_spy": 0.9396993997193678,
-          "composite": 0.0,
-          "cost_drag": 0.047019746562950056,
-          "dsr": 1.3287714384530515e-05,
-          "ir_ew": -0.7544869503155879,
-          "ir_spy": -0.5945330764200827,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.3362833536866838,
-          "turnover": 19.355703426878517
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.054122431829959794,
-            "ir_ew": -0.7544869503155879,
-            "ir_spy": -0.5945330764200827,
-            "n_days": 3523,
-            "sharpe": 0.3362833536866838
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1992,
-          "split_date": "1993-01-01"
-        },
-        "queue_id": "Q-000012",
-        "role": "exploration",
-        "status": "ok",
-        "strategy": "H-0007:window=200,n_holdings=40"
-      },
-      {
-        "card": "H-0011",
-        "duration_s": 14.03,
-        "experiment_id": "E-000017",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.4411562277918411,
-          "ar_spy": -0.38465642340198825,
-          "beta_spy": 1.1033744982840124,
-          "composite": 0.0,
-          "cost_drag": 0.014702061075593546,
-          "dsr": 0.000280911923268045,
-          "ir_ew": -0.34679026587271616,
-          "ir_spy": -0.2736156311422809,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.3869569652613785,
-          "turnover": 5.575342600261635
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "queue_id": "Q-000029",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0011:hysteresis_buffer=15,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0012",
-        "duration_s": 16.22,
-        "experiment_id": "E-000018",
-        "exploration_reasons": [
-          "untested_hypothesis",
           "under_explored_family"
         ],
         "family": "volatility",
@@ -917,17 +415,17 @@
           "stage": "failed_gate1"
         },
         "metrics": {
-          "ar_ew": 0.6447694480917692,
-          "ar_spy": 0.6649131188108856,
-          "beta_spy": 0.502368035598518,
-          "composite": 0.06586918582842383,
-          "cost_drag": 0.00807170365662152,
-          "dsr": 0.1592965621414244,
-          "ir_ew": -0.16170032197211626,
-          "ir_spy": -0.11096040597134631,
+          "ar_ew": 0.5382407270427936,
+          "ar_spy": 0.5792924259201145,
+          "beta_spy": 0.7729422452542781,
+          "composite": 0.00931942049179853,
+          "cost_drag": 0.00791413777038382,
+          "dsr": 0.03561404141503157,
+          "ir_ew": -0.00935413151695293,
+          "ir_spy": 0.0708395443748006,
           "sensitivity_loss_20": null,
-          "sharpe": 0.9386387847312181,
-          "turnover": 1.9365180254100463
+          "sharpe": 0.8384124183231395,
+          "turnover": 2.08132673577227
         },
         "mutation": null,
         "parent_id": null,
@@ -937,11 +435,11 @@
           "oos_end": "2022-12-30",
           "oos_start": "2011-01-10",
           "post": {
-            "ann_return": 0.1123605768505469,
-            "ir_ew": -0.16170032197211626,
-            "ir_spy": -0.11096040597134631,
+            "ann_return": 0.1268175516079586,
+            "ir_ew": -0.00935413151695293,
+            "ir_spy": 0.0708395443748006,
             "n_days": 3015,
-            "sharpe": 0.9386387847312181
+            "sharpe": 0.8384124183231395
           },
           "pre": {
             "ann_return": null,
@@ -953,123 +451,15 @@
           "publication_year": 2006,
           "split_date": "2007-01-01"
         },
-        "queue_id": "Q-000018",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0012:window=504,n_holdings=25,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0012",
-        "duration_s": 12.39,
-        "experiment_id": "E-000019",
-        "exploration_reasons": [
-          "untested_hypothesis",
-          "under_explored_family"
-        ],
-        "family": "volatility",
-        "gate1": {
-          "failed_checks": [
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": 0.6753200182019944,
-          "ar_spy": 0.7117489258085652,
-          "beta_spy": 0.5013163472172428,
-          "composite": 0.02358124396537207,
-          "cost_drag": 0.010827309076869098,
-          "dsr": 0.05541557096125834,
-          "ir_ew": -0.1707914463903148,
-          "ir_spy": -0.09908510975594342,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.9686414497236084,
-          "turnover": 3.058660477333491
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2010-01-11",
-          "post": {
-            "ann_return": 0.11452160257836352,
-            "ir_ew": -0.1707914463903148,
-            "ir_spy": -0.09908510975594342,
-            "n_days": 3267,
-            "sharpe": 0.9686414497236084
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 2006,
-          "split_date": "2007-01-01"
-        },
-        "queue_id": "Q-000016",
+        "queue_id": "Q-000050",
         "role": "exploration",
         "status": "ok",
-        "strategy": "H-0012:window=252,n_holdings=25,rebalance_every_weeks=4"
+        "strategy": "H-0013:window=504,n_holdings=25,rebalance_every_weeks=4"
       },
       {
-        "card": "H-0011",
-        "duration_s": 12.88,
-        "experiment_id": "E-000020",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.32271961876469046,
-          "ar_spy": -0.26627431639319044,
-          "beta_spy": 1.1062126006759578,
-          "composite": 0.0,
-          "cost_drag": 0.012857608125776184,
-          "dsr": 3.05620187827634e-07,
-          "ir_ew": -0.22556859444094063,
-          "ir_spy": -0.1530890290952723,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.4488230011957655,
-          "turnover": 4.7592111714062515
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "queue_id": "Q-000031",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0011:hysteresis_buffer=25,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0012",
-        "duration_s": 12.95,
-        "experiment_id": "E-000021",
+        "card": "H-0014",
+        "duration_s": 21.63,
+        "experiment_id": "E-000043",
         "exploration_reasons": [
           "untested_hypothesis",
           "under_explored_family"
@@ -1088,486 +478,51 @@
           "stage": "failed_gate1"
         },
         "metrics": {
-          "ar_ew": 0.3187548624213893,
-          "ar_spy": 0.35640542048785456,
-          "beta_spy": 0.6721639362578984,
-          "composite": 0.0023502638033198286,
-          "cost_drag": 0.008013545441868877,
-          "dsr": 0.005944130763612405,
-          "ir_ew": -0.17859390136584127,
-          "ir_spy": -0.11520643847242276,
+          "ar_ew": 0.4500451475887858,
+          "ar_spy": 0.4770759231785132,
+          "beta_spy": 0.3814037008113114,
+          "composite": 0.00357614021882563,
+          "cost_drag": 0.0072917959940466594,
+          "dsr": 0.01638580788614694,
+          "ir_ew": -0.32751221305690176,
+          "ir_spy": -0.28382297269036727,
           "sensitivity_loss_20": null,
-          "sharpe": 0.7566442684048759,
-          "turnover": 1.5871305021806956
+          "sharpe": 0.8035179030290857,
+          "turnover": 1.4961597115249392
         },
         "mutation": null,
         "parent_id": null,
         "provisional": true,
         "publication_split": {
-          "decay_sharpe": null,
+          "decay_sharpe": 0.7395733368016656,
           "oos_end": "2022-12-30",
           "oos_start": "2011-01-10",
           "post": {
-            "ann_return": 0.10954015306178277,
-            "ir_ew": -0.17859390136584127,
-            "ir_spy": -0.11520643847242276,
-            "n_days": 3015,
-            "sharpe": 0.7566442684048759
+            "ann_return": 0.0732747980395605,
+            "ir_ew": -0.251873468171568,
+            "ir_spy": -0.24230835798922706,
+            "n_days": 2014,
+            "sharpe": 0.6151179068781684
           },
           "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
+            "ann_return": 0.11176421205640619,
+            "ir_ew": -0.5347194698999521,
+            "ir_spy": -0.4203109769189419,
+            "n_days": 1001,
+            "sharpe": 1.354691243679834
           },
-          "publication_year": 2006,
-          "split_date": "2007-01-01"
+          "publication_year": 2014,
+          "split_date": "2015-01-01"
         },
-        "queue_id": "Q-000019",
+        "queue_id": "Q-000054",
         "role": "exploitation",
         "status": "ok",
-        "strategy": "H-0012:window=504,n_holdings=50,rebalance_every_weeks=4"
+        "strategy": "H-0014:window=504,n_holdings=25,rebalance_every_weeks=4"
       },
       {
-        "card": "H-0004",
-        "duration_s": 17.2,
-        "experiment_id": "E-000022",
-        "exploration_reasons": [
-          "untested_hypothesis",
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.4837591573105068,
-          "ar_spy": -0.4011519388184633,
-          "beta_spy": 1.0104243437695357,
-          "composite": 0.0,
-          "cost_drag": 0.058997226190236875,
-          "dsr": 7.64208351815487e-09,
-          "ir_ew": -0.5251295050686201,
-          "ir_spy": -0.3894711050002471,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.3866863324596995,
-          "turnover": 24.724892770926225
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.06825343819027374,
-            "ir_ew": -0.5251295050686201,
-            "ir_spy": -0.3894711050002471,
-            "n_days": 3523,
-            "sharpe": 0.3866863324596995
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1993,
-          "split_date": "1994-01-01"
-        },
-        "queue_id": "Q-000032",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0004:skip=10,n_holdings=25,rebalance_every_weeks=1"
-      },
-      {
-        "card": "H-0006",
-        "duration_s": 17.77,
-        "experiment_id": "E-000023",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "reversal",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "beats_momentum_12_1",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -1.033576852267067,
-          "ar_spy": -0.8779784941118836,
-          "beta_spy": 1.2928775573056779,
-          "composite": 0.0,
-          "cost_drag": 0.16389929230973443,
-          "dsr": 1.3019769530680827e-15,
-          "ir_ew": -0.7305226579481221,
-          "ir_spy": -0.593627735917842,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.1187554475875411,
-          "turnover": 69.1817536813693
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": -0.0023673895788690613,
-            "ir_ew": -0.7305226579481221,
-            "ir_spy": -0.593627735917842,
-            "n_days": 3523,
-            "sharpe": 0.1187554475875411
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1990,
-          "split_date": "1991-01-01"
-        },
-        "queue_id": "Q-000005",
-        "role": "exploration",
-        "status": "ok",
-        "strategy": "H-0006:lookback=10"
-      },
-      {
-        "card": "H-0004",
-        "duration_s": 12.13,
-        "experiment_id": "E-000024",
-        "exploration_reasons": [
-          "untested_hypothesis",
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.3907912994357013,
-          "ar_spy": -0.3133597513864747,
-          "beta_spy": 1.0383430490417551,
-          "composite": 0.0,
-          "cost_drag": 0.029467034352158056,
-          "dsr": 2.4336876205924134e-08,
-          "ir_ew": -0.40238213092454234,
-          "ir_spy": -0.2693233094403218,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.44465883823428665,
-          "turnover": 11.881561064036214
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.0828925619743357,
-            "ir_ew": -0.40238213092454234,
-            "ir_spy": -0.2693233094403218,
-            "n_days": 3523,
-            "sharpe": 0.44465883823428665
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1993,
-          "split_date": "1994-01-01"
-        },
-        "queue_id": "Q-000033",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0004:skip=10,n_holdings=25,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0005",
-        "duration_s": 14.77,
-        "experiment_id": "E-000025",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "volatility",
-        "gate1": {
-          "failed_checks": [
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": 0.4143519970267245,
-          "ar_spy": 0.4595142535597098,
-          "beta_spy": 0.5209415856410322,
-          "composite": 0.0010003940299109402,
-          "cost_drag": 0.02477459791676957,
-          "dsr": 0.005595390072482624,
-          "ir_ew": -0.34197659708720635,
-          "ir_spy": -0.2449841953080942,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.839298640635862,
-          "turnover": 8.602663874720257
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.10560265857695339,
-            "ir_ew": -0.34197659708720635,
-            "ir_spy": -0.2449841953080942,
-            "n_days": 3523,
-            "sharpe": 0.839298640635862
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 2006,
-          "split_date": "2007-01-01"
-        },
-        "queue_id": "Q-000021",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0005:window=60,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0011",
-        "duration_s": 16.49,
-        "experiment_id": "E-000026",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.3136295079904609,
-          "ar_spy": -0.25852840340694966,
-          "beta_spy": 1.0996201197517603,
-          "composite": 0.0,
-          "cost_drag": 0.015666076401454634,
-          "dsr": 3.0943873209405655e-07,
-          "ir_ew": -0.22429278084204543,
-          "ir_spy": -0.15156377815887578,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.4533903915004613,
-          "turnover": 6.027757937279452
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "queue_id": "Q-000015",
-        "role": "exploration",
-        "status": "ok",
-        "strategy": "H-0011:hysteresis_buffer=25,rebalance_every_weeks=1"
-      },
-      {
-        "card": "H-0005",
-        "duration_s": 14.51,
-        "experiment_id": "E-000027",
-        "exploration_reasons": [
-          "under_explored_family"
-        ],
-        "family": "volatility",
-        "gate1": {
-          "failed_checks": [
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "pbo_family",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": 0.4103138678730522,
-          "ar_spy": 0.45178142988651115,
-          "beta_spy": 0.5005378639240237,
-          "composite": 0.0017425313607433459,
-          "cost_drag": 0.015777907050953676,
-          "dsr": 0.006061873777937852,
-          "ir_ew": -0.3479604405073674,
-          "ir_spy": -0.25534551935753896,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.8316880340178514,
-          "turnover": 4.891451402678106
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.1032790151132772,
-            "ir_ew": -0.3479604405073674,
-            "ir_spy": -0.25534551935753896,
-            "n_days": 3523,
-            "sharpe": 0.8316880340178514
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 2006,
-          "split_date": "2007-01-01"
-        },
-        "queue_id": "Q-000023",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0005:window=126,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0004",
-        "duration_s": 17.52,
-        "experiment_id": "E-000028",
-        "exploration_reasons": [
-          "untested_hypothesis",
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.4873999898364085,
-          "ar_spy": -0.38073940566887066,
-          "beta_spy": 1.0180134700364993,
-          "composite": 0.0,
-          "cost_drag": 0.053767792349215686,
-          "dsr": 2.5694192972410207e-09,
-          "ir_ew": -0.5207485263658558,
-          "ir_spy": -0.35760714180977643,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.43835804525981437,
-          "turnover": 22.043627236291364
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.07916318777401177,
-            "ir_ew": -0.5207485263658558,
-            "ir_spy": -0.35760714180977643,
-            "n_days": 3523,
-            "sharpe": 0.43835804525981437
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1993,
-          "split_date": "1994-01-01"
-        },
-        "queue_id": "Q-000034",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0004:skip=10,n_holdings=40,rebalance_every_weeks=1"
-      },
-      {
-        "card": "H-0012",
-        "duration_s": 10.17,
-        "experiment_id": "E-000029",
+        "card": "H-0014",
+        "duration_s": 19.18,
+        "experiment_id": "E-000044",
         "exploration_reasons": [
           "untested_hypothesis",
           "under_explored_family"
@@ -1578,6 +533,7 @@
             "dsr_beta_adj_vs_spy",
             "dsr_beta_adj_vs_equal_weight",
             "pbo_family",
+            "years_positive_ar_share",
             "sensitivity_loss_20",
             "factor_alpha_t"
           ],
@@ -1586,64 +542,125 @@
           "stage": "failed_gate1"
         },
         "metrics": {
-          "ar_ew": 0.4166125930961797,
-          "ar_spy": 0.46587277695174395,
-          "beta_spy": 0.6585378186771355,
-          "composite": 0.0029301315847485724,
-          "cost_drag": 0.010239125720690733,
-          "dsr": 0.008382495548290533,
-          "ir_ew": -0.15045566675691666,
-          "ir_spy": -0.0637600506178585,
+          "ar_ew": 0.2898554989848319,
+          "ar_spy": 0.33248414411819355,
+          "beta_spy": 0.52310759325156,
+          "composite": 0.0004300753838243622,
+          "cost_drag": 0.012138680925410145,
+          "dsr": 0.0025526015600798257,
+          "ir_ew": -0.296324483225858,
+          "ir_spy": -0.22784538022413783,
           "sensitivity_loss_20": null,
-          "sharpe": 0.8193746360543384,
-          "turnover": 2.469353746367532
+          "sharpe": 0.7183593710158966,
+          "turnover": 3.221865033837776
         },
         "mutation": null,
         "parent_id": null,
         "provisional": true,
         "publication_split": {
-          "decay_sharpe": null,
+          "decay_sharpe": 0.8761952514570821,
           "oos_end": "2022-12-30",
           "oos_start": "2010-01-11",
           "post": {
-            "ann_return": 0.11625225962292918,
-            "ir_ew": -0.15045566675691666,
-            "ir_spy": -0.0637600506178585,
-            "n_days": 3267,
-            "sharpe": 0.8193746360543384
+            "ann_return": 0.0657645394751798,
+            "ir_ew": -0.2822638235176093,
+            "ir_spy": -0.2775873502588336,
+            "n_days": 2014,
+            "sharpe": 0.4567426213732706
           },
           "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
+            "ann_return": 0.14024768480841288,
+            "ir_ew": -0.334562900563805,
+            "ir_spy": -0.11951254457384956,
+            "n_days": 1253,
+            "sharpe": 1.3329378728303527
           },
-          "publication_year": 2006,
-          "split_date": "2007-01-01"
+          "publication_year": 2014,
+          "split_date": "2015-01-01"
         },
-        "queue_id": "Q-000017",
+        "queue_id": "Q-000053",
+        "role": "exploitation",
+        "status": "ok",
+        "strategy": "H-0014:window=252,n_holdings=35,rebalance_every_weeks=4"
+      },
+      {
+        "card": "H-0014",
+        "duration_s": 12.9,
+        "experiment_id": "E-000045",
+        "exploration_reasons": [
+          "untested_hypothesis",
+          "under_explored_family"
+        ],
+        "family": "volatility",
+        "gate1": {
+          "failed_checks": [
+            "ar_vs_spy",
+            "dsr_beta_adj_vs_spy",
+            "dsr_beta_adj_vs_equal_weight",
+            "pbo_family",
+            "sensitivity_loss_20",
+            "factor_alpha_t"
+          ],
+          "note": null,
+          "passed": false,
+          "stage": "failed_gate1"
+        },
+        "metrics": {
+          "ar_ew": 0.1138073573961875,
+          "ar_spy": 0.15506243940258213,
+          "beta_spy": 0.43500021773226666,
+          "composite": 4.699244575617206e-05,
+          "cost_drag": 0.010370036567608997,
+          "dsr": 0.0003331225517587438,
+          "ir_ew": -0.48346788064978563,
+          "ir_spy": -0.4228408439854429,
+          "sensitivity_loss_20": null,
+          "sharpe": 0.5744899022885055,
+          "turnover": 2.7798379408269245
+        },
+        "mutation": null,
+        "parent_id": null,
+        "provisional": true,
+        "publication_split": {
+          "decay_sharpe": 0.9796685292689001,
+          "oos_end": "2022-12-30",
+          "oos_start": "2010-01-11",
+          "post": {
+            "ann_return": 0.038696656939744,
+            "ir_ew": -0.4629849781836498,
+            "ir_spy": -0.45585069720092686,
+            "n_days": 2014,
+            "sharpe": 0.29334985204868913
+          },
+          "pre": {
+            "ann_return": 0.11224310853275266,
+            "ir_ew": -0.5332521518321676,
+            "ir_spy": -0.3659668749446217,
+            "n_days": 1253,
+            "sharpe": 1.2730183813175893
+          },
+          "publication_year": 2014,
+          "split_date": "2015-01-01"
+        },
+        "queue_id": "Q-000052",
         "role": "exploration",
         "status": "ok",
-        "strategy": "H-0012:window=252,n_holdings=50,rebalance_every_weeks=4"
+        "strategy": "H-0014:window=252,n_holdings=25,rebalance_every_weeks=4"
       },
       {
-        "card": "H-0004",
-        "duration_s": 14.2,
-        "experiment_id": "E-000030",
+        "card": "H-0014",
+        "duration_s": 12.61,
+        "experiment_id": "E-000046",
         "exploration_reasons": [
           "untested_hypothesis",
           "under_explored_family"
         ],
-        "family": "momentum",
+        "family": "volatility",
         "gate1": {
           "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
             "dsr_beta_adj_vs_spy",
             "dsr_beta_adj_vs_equal_weight",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
+            "pbo_family",
             "sensitivity_loss_20",
             "factor_alpha_t"
           ],
@@ -1652,188 +669,62 @@
           "stage": "failed_gate1"
         },
         "metrics": {
-          "ar_ew": -0.3120917938857229,
-          "ar_spy": -0.21356871426819896,
-          "beta_spy": 1.0323867397723558,
-          "composite": 0.0,
-          "cost_drag": 0.027854281372158722,
-          "dsr": 1.297918660295475e-07,
-          "ir_ew": -0.32764353343289454,
-          "ir_spy": -0.17127543451017843,
+          "ar_ew": 0.31284733635163203,
+          "ar_spy": 0.34715323358141026,
+          "beta_spy": 0.513878556045855,
+          "composite": 0.0014309428611800966,
+          "cost_drag": 0.00964016458479926,
+          "dsr": 0.004928867165155826,
+          "ir_ew": -0.27466746743971104,
+          "ir_spy": -0.22358749091591396,
           "sensitivity_loss_20": null,
-          "sharpe": 0.5246672182669673,
-          "turnover": 10.848164791490031
+          "sharpe": 0.724476923291196,
+          "turnover": 2.0874993650325466
         },
         "mutation": null,
         "parent_id": null,
         "provisional": true,
         "publication_split": {
-          "decay_sharpe": null,
+          "decay_sharpe": 0.8187352594934668,
           "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
+          "oos_start": "2011-01-10",
           "post": {
-            "ann_return": 0.09999581359291798,
-            "ir_ew": -0.32764353343289454,
-            "ir_spy": -0.17127543451017843,
-            "n_days": 3523,
-            "sharpe": 0.5246672182669673
+            "ann_return": 0.07359610632839786,
+            "ir_ew": -0.24556537578886395,
+            "ir_spy": -0.23162413193013964,
+            "n_days": 2014,
+            "sharpe": 0.5180764546075783
           },
           "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
+            "ann_return": 0.13622252452746242,
+            "ir_ew": -0.3634484938995156,
+            "ir_spy": -0.2146287789230135,
+            "n_days": 1001,
+            "sharpe": 1.3368117141010452
           },
-          "publication_year": 1993,
-          "split_date": "1994-01-01"
+          "publication_year": 2014,
+          "split_date": "2015-01-01"
         },
-        "queue_id": "Q-000035",
+        "queue_id": "Q-000055",
         "role": "exploitation",
         "status": "ok",
-        "strategy": "H-0004:skip=10,n_holdings=40,rebalance_every_weeks=4"
-      },
-      {
-        "card": "H-0004",
-        "duration_s": 18.29,
-        "experiment_id": "E-000031",
-        "exploration_reasons": [
-          "untested_hypothesis",
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.4818520916877862,
-          "ar_spy": -0.3977950758723333,
-          "beta_spy": 1.0333199462459395,
-          "composite": 0.0,
-          "cost_drag": 0.06141357118507905,
-          "dsr": 4.422652832454225e-09,
-          "ir_ew": -0.4971888862526519,
-          "ir_spy": -0.3594504554103606,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.4000028882166939,
-          "turnover": 25.675749615006335
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.07195331666953408,
-            "ir_ew": -0.4971888862526519,
-            "ir_spy": -0.3594504554103606,
-            "n_days": 3523,
-            "sharpe": 0.4000028882166939
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1993,
-          "split_date": "1994-01-01"
-        },
-        "queue_id": "Q-000036",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0004:skip=21,n_holdings=25,rebalance_every_weeks=1"
-      },
-      {
-        "card": "H-0004",
-        "duration_s": 14.32,
-        "experiment_id": "E-000032",
-        "exploration_reasons": [
-          "untested_hypothesis",
-          "under_explored_family"
-        ],
-        "family": "momentum",
-        "gate1": {
-          "failed_checks": [
-            "ar_vs_spy",
-            "ar_vs_equal_weight",
-            "dsr_beta_adj_vs_spy",
-            "dsr_beta_adj_vs_equal_weight",
-            "years_positive_ar_share",
-            "positive_at_2x_costs",
-            "sensitivity_loss_20",
-            "factor_alpha_t"
-          ],
-          "note": null,
-          "passed": false,
-          "stage": "failed_gate1"
-        },
-        "metrics": {
-          "ar_ew": -0.3476827654543998,
-          "ar_spy": -0.2719353746062094,
-          "beta_spy": 1.0450420646036782,
-          "composite": 0.0,
-          "cost_drag": 0.030338737301048243,
-          "dsr": 1.1583607074417449e-07,
-          "ir_ew": -0.3517953528884795,
-          "ir_spy": -0.2202531877565215,
-          "sensitivity_loss_20": null,
-          "sharpe": 0.46741535537494827,
-          "turnover": 12.23447229340791
-        },
-        "mutation": null,
-        "parent_id": null,
-        "provisional": true,
-        "publication_split": {
-          "decay_sharpe": null,
-          "oos_end": "2022-12-30",
-          "oos_start": "2009-01-05",
-          "post": {
-            "ann_return": 0.08876022839662778,
-            "ir_ew": -0.3517953528884795,
-            "ir_spy": -0.2202531877565215,
-            "n_days": 3523,
-            "sharpe": 0.46741535537494827
-          },
-          "pre": {
-            "ann_return": null,
-            "ir_ew": null,
-            "ir_spy": null,
-            "n_days": 0,
-            "sharpe": null
-          },
-          "publication_year": 1993,
-          "split_date": "1994-01-01"
-        },
-        "queue_id": "Q-000037",
-        "role": "exploitation",
-        "status": "ok",
-        "strategy": "H-0004:skip=21,n_holdings=25,rebalance_every_weeks=4"
+        "strategy": "H-0014:window=504,n_holdings=35,rebalance_every_weeks=4"
       }
     ],
     "universe_mode": "pit_sp500",
     "weekly_quota": {
-      "done": 10,
+      "done": 9,
       "need": 0,
       "required": 3,
       "threshold_trials": 20,
-      "underexplored_families": [],
-      "week_start": "2026-10-05"
+      "underexplored_families": [
+        "combo",
+        "momentum",
+        "reversal",
+        "trend",
+        "volatility"
+      ],
+      "week_start": "2026-10-12"
     }
   },
   "lock": {
@@ -1848,136 +739,15 @@
   "queue": {
     "counts": {
       "crashed": 0,
-      "done": 30,
+      "done": 44,
       "failed": 0,
-      "pending": 10,
+      "pending": 0,
       "running": 0,
-      "skipped": 7
+      "skipped": 12
     },
     "invalid_items": [],
     "path": "registry/queue.yaml",
-    "pending": [
-      {
-        "card": "H-0004",
-        "id": "Q-000038",
-        "params": {
-          "n_holdings": 40,
-          "rebalance_every_weeks": 1,
-          "skip": 21
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0004",
-        "id": "Q-000039",
-        "params": {
-          "n_holdings": 40,
-          "rebalance_every_weeks": 4,
-          "skip": 21
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000040",
-        "params": {
-          "lookback": 126,
-          "n_holdings": 25,
-          "rebalance_every_weeks": 1
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000041",
-        "params": {
-          "lookback": 126,
-          "n_holdings": 25,
-          "rebalance_every_weeks": 4
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000042",
-        "params": {
-          "lookback": 126,
-          "n_holdings": 40,
-          "rebalance_every_weeks": 1
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000043",
-        "params": {
-          "lookback": 126,
-          "n_holdings": 40,
-          "rebalance_every_weeks": 4
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000044",
-        "params": {
-          "lookback": 252,
-          "n_holdings": 25,
-          "rebalance_every_weeks": 1
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000045",
-        "params": {
-          "lookback": 252,
-          "n_holdings": 25,
-          "rebalance_every_weeks": 4
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000046",
-        "params": {
-          "lookback": 252,
-          "n_holdings": 40,
-          "rebalance_every_weeks": 1
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      },
-      {
-        "card": "H-0002",
-        "id": "Q-000047",
-        "params": {
-          "lookback": 252,
-          "n_holdings": 40,
-          "rebalance_every_weeks": 4
-        },
-        "priority": 2.0,
-        "remote_id": null,
-        "source": "literature"
-      }
-    ]
+    "pending": []
   },
   "schema_version": 1
 }
