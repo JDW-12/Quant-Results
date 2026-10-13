@@ -112,6 +112,13 @@ def build() -> dict[str, list]:
             for i, day in enumerate(dates):
                 if i < len(vals) and _num(vals[i]) is not None:
                     paper_curve.append({"portfolio": po["id"], "series": name, "date": day, "value_gbp": vals[i]})
+        if not dates and po.get("start_date"):
+            # Before the first fill the book is GBP cash at its starting capital: one honest point per series.
+            names = ["Strategy"] + [("SPY" if b.get("id") == "spy" else "Min vol ETF" if b.get("id") == "minvol" else b.get("id"))
+                                    for b in po.get("benchmarks") or [] if isinstance(b, dict)]
+            for name in names:
+                paper_curve.append({"portfolio": po["id"], "series": name, "date": po["start_date"],
+                                    "value_gbp": po.get("capital_gbp") or 10000.0})
         for pos in po.get("positions") or []:
             positions.append({"portfolio": po["id"], "ticker": pos.get("ticker"), "weight": _num(pos.get("weight"))})
 
