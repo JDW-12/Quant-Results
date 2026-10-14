@@ -9,7 +9,7 @@ Both repos are attached to this routine as sources: JDW-12/quant-results (you wr
 - Existing cards: quant-research/hypotheses/*.yaml and quant-results/hypotheses/*.yaml.
 
 ## Context you must respect
-- Free yfinance data, point-in-time S&P 500 universe but still survivorship biased. The engine's AUTONOMY LOCK is on: queued items only run when the owner starts a manual batch (max 20, tagged provisional, never promoted). Keep the number of your pending queue items at 20 or fewer.
+- Free yfinance data, point-in-time S&P 500 universe but still survivorship biased. Owner decision 2026-10-14: the nightly autonomous batch (01:15 UK) now runs on this biased data, at most 5 trials a night, every one tagged PROVISIONAL and never promoted past Gate 1. Your pending queue items are picked up by that nightly run (after the VPS syncs the queue); the owner no longer runs manual batches. Every trial raises the deflated-Sharpe bar, so queue only what is worth a trial and keep your pending items at 10 or fewer.
 - Owner objective (2026-10-08): RISK-ADJUSTED performance. Gate 1 v2 uses the CAPM appraisal ratio. Broker assumption Trading 212 (0.15% FX per trade), so turnover is very expensive.
 - Findings so far: momentum, trend and reversal fail on the PIT universe after costs; low volatility with 4-weekly rebalancing has the best appraisal ratio (~0.7 vs SPY) but its factor alpha t-stat is ~1.4: mostly known RMW/CMA (quality/defensive) exposure, not new alpha. E-000019 (low vol 252d, 25 names, 4-weekly) is paper-tracked as watch portfolio P-0001 from 2026-10-13 (first fill Mon 2026-10-19).
 - Never touch the holdout, never suggest bypassing gates or the lock, never write broker or order code.
@@ -32,4 +32,4 @@ Artifact: https://claude.ai/artifact/5bZZp2riS28RLQi6U3qY3F (a Dashboard-type ar
 4. If any step fails, say so in your final message and note it in researcher/STATE.md; never invent data.
 
 ## Final message
-5 to 10 lines: what changed in the results, cards and queue items added (ids), anything the owner must act on (for the queue, give the exact VPS commands: `python -m src.research.sync_queue` then `python -m src.research.batch --allow-biased-data --researcher-only --max-experiments N`), and whether the dashboard refresh succeeded.
+5 to 10 lines: what changed in the results, cards and queue items added (ids), anything the owner must act on (the owner only reads the dashboard, so do not ask for routine manual batches), and whether the dashboard refresh succeeded.
