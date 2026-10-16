@@ -13,17 +13,28 @@
     "total_trials": 46
   },
   "data": {
-    "current_snapshot": "775d7a27a2938432",
+    "current_snapshot": "a777668faaa39bac",
     "snapshots": [
       {
-        "created_at": "2026-10-09T10:10:28.790794+00:00",
+        "created_at": "2026-10-16T00:17:42.976799+00:00",
         "current": true,
+        "data_version": "a777668faaa39bac",
+        "last_date": "2026-10-15 00:00:00",
+        "provider": "yfinance",
+        "size_bytes": 109735585,
+        "survivorship_free": false,
+        "unique_bytes": 109184707,
+        "universe_mode": "pit_sp500"
+      },
+      {
+        "created_at": "2026-10-09T10:10:28.790794+00:00",
+        "current": false,
         "data_version": "775d7a27a2938432",
         "last_date": "2026-10-08 00:00:00",
         "provider": "yfinance",
         "size_bytes": 109675431,
         "survivorship_free": false,
-        "unique_bytes": 109675431,
+        "unique_bytes": 109124553,
         "universe_mode": "pit_sp500"
       }
     ]
@@ -127,10 +138,10 @@
   ],
   "last_nightly_job": {
     "job": "nightly",
-    "local_date": "2026-10-15",
+    "local_date": "2026-10-16",
     "steps": [
       {
-        "message": "memory ok: 7.63 GB headroom",
+        "message": "memory ok: 7.84 GB headroom",
         "name": "guard",
         "status": "ok"
       },
@@ -140,14 +151,19 @@
         "status": "ok"
       },
       {
-        "message": "live store refreshed: 509/510 tickers, last date 2026-10-14 | P-0001: +0 marks",
+        "message": "live store refreshed: 509/510 tickers, last date 2026-10-15 | P-0001: +0 marks",
         "name": "daily_refresh",
         "status": "ok"
       },
       {
-        "message": "not due: current snapshot is 6.3 days old (< 7)",
+        "message": "store rebuilt (universe_mode pit_sp500); current snapshot a777668faaa39bac",
         "name": "research_refresh",
-        "status": "skipped"
+        "status": "ok"
+      },
+      {
+        "message": "deleted 0 unreferenced snapshot(s), kept 2",
+        "name": "prune_snapshots",
+        "status": "ok"
       },
       {
         "message": "locked (survivorship-biased data)",
@@ -347,7 +363,7 @@
   },
   "lock": {
     "autonomous_batches": "locked",
-    "message": "AUTONOMY LOCK: refusing --autonomous. The data provider (yfinance; /home/ubuntu/quant-research/data/snapshots/775d7a27a2938432/MANIFEST.json) is not survivorship free, so unattended research would mine survivorship bias. The lock lifts automatically when the store is rebuilt from a survivorship-free provider (MANIFEST.json survivorship_free: true). Until then run small manual batches with --allow-biased-data (at most 20 experiments, tagged provisional).",
+    "message": "AUTONOMY LOCK: refusing --autonomous. The data provider (yfinance; /home/ubuntu/quant-research/data/snapshots/a777668faaa39bac/MANIFEST.json) is not survivorship free, so unattended research would mine survivorship bias. The lock lifts automatically when the store is rebuilt from a survivorship-free provider (MANIFEST.json survivorship_free: true). Until then run small manual batches with --allow-biased-data (at most 20 experiments, tagged provisional).",
     "provenance": {
       "provider": "yfinance",
       "survivorship_free": false,
