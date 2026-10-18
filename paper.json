@@ -26,12 +26,12 @@
   "capital_gbp": 10000.0,
   "currency": "GBP",
   "free_data": true,
-  "generated_at": "2026-10-17T00:15:59.645287+00:00",
+  "generated_at": "2026-10-18T00:15:55.590513+00:00",
   "live_data": {
     "failures": {},
     "last_date": "2026-10-16",
     "n_tickers": 509,
-    "refreshed_at": "2026-10-17T00:15:29+00:00"
+    "refreshed_at": "2026-10-18T00:15:23+00:00"
   },
   "note": "Paper portfolios start with a notional GBP 10,000 on their start date and are filled at the next open after each Friday-close signal with full costs (fees, spread, FX per trade, 15% US dividend withholding; ETF TERs are already inside the NAV-based prices). Simulated only: no broker connection exists. Watch portfolios (e.g. provisional experiments) are tracking only: their Gate 3 / kill-rule results are informational and never change a registry stage.",
   "portfolios": [
