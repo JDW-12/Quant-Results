@@ -138,10 +138,10 @@
   ],
   "last_nightly_job": {
     "job": "nightly",
-    "local_date": "2026-10-18",
+    "local_date": "2026-10-19",
     "steps": [
       {
-        "message": "memory ok: 7.81 GB headroom",
+        "message": "memory ok: 8.00 GB headroom",
         "name": "guard",
         "status": "ok"
       },
@@ -156,7 +156,7 @@
         "status": "ok"
       },
       {
-        "message": "not due: current snapshot is 2.0 days old (< 7)",
+        "message": "not due: current snapshot is 3.0 days old (< 7)",
         "name": "research_refresh",
         "status": "skipped"
       },
