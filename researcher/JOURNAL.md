@@ -122,3 +122,9 @@ Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with
 What I learned: repo head unchanged since the earlier check-in today (46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, autonomy lock on, errors.json clean, queue empty). Engine data last date 2026-10-15/16, no new nightly publish since 2026-10-19. P-0001 has 0 weeks tracked, nothing to judge. No new overfitting or data-quality signal.
 
 Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic testable on free price-only data), no further low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
+
+## 2026-10-22 — Check-in: results unchanged, engine publish stale 3 days
+
+What I learned: no change in results. 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, autonomy lock on, errors.json clean, queue empty. The last engine nightly publish of dashboard.json/paper.json is 2026-10-19 00:15 UTC (live data last date 2026-10-16); nothing has been published on 10-20, 10-21 or 10-22, so P-0001 (first fill 2026-10-19) has no tracked marks. Either the VPS nightly job is down or it is not pushing; the owner should check. No new overfitting or data-quality signal beyond the recorded DSR 0.00 to 0.09 across the volatility family.
+
+Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic testable on free price-only data; quality/value need PIT fundamentals), no further low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
