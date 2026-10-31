@@ -20,3 +20,6 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 
 ## Pending queue ids
 None (R-0001 to R-0009 all ran).
+
+## Dashboard refresh
+2026-10-31: NOT refreshed. Artifact/ArtifactData tools unavailable in the scheduled session (only mcp__claude-artifacts tools); researcher/dash/*.json built locally only.
