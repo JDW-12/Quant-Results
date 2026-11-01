@@ -22,4 +22,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-01: see final status in commit/journal follow-up; if unrefreshed, tools were unavailable.
+2026-11-01: refreshed OK (8 datasets re-attached, old blobs deleted).
