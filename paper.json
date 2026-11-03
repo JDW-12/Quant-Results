@@ -26,12 +26,12 @@
   "capital_gbp": 10000.0,
   "currency": "GBP",
   "free_data": true,
-  "generated_at": "2026-11-02T01:15:49.726518+00:00",
+  "generated_at": "2026-11-03T01:15:40.642991+00:00",
   "live_data": {
     "failures": {},
-    "last_date": "2026-10-30",
+    "last_date": "2026-11-02",
     "n_tickers": 506,
-    "refreshed_at": "2026-11-02T01:15:18+00:00"
+    "refreshed_at": "2026-11-03T01:15:11+00:00"
   },
   "note": "Paper portfolios start with a notional GBP 10,000 on their start date and are filled at the next open after each Friday-close signal with full costs (fees, spread, FX per trade, 15% US dividend withholding; ETF TERs are already inside the NAV-based prices). Simulated only: no broker connection exists. Watch portfolios (e.g. provisional experiments) are tracking only: their Gate 3 / kill-rule results are informational and never change a registry stage.",
   "portfolios": [
@@ -39,22 +39,22 @@
       "backtest_max_dd": -0.20588589626556686,
       "benchmarks": [
         {
-          "excess_return": 0.028838608058041282,
+          "excess_return": 0.02935389453081194,
           "id": "spy",
           "label": "SPY (S&P 500, USD)",
           "max_dd": -0.021279251509527808,
-          "return_since_start": -0.012461961895717466,
+          "return_since_start": -0.012977248368488126,
           "ticker": "SPY",
-          "value_gbp": 9875.380381042825
+          "value_gbp": 9870.227516315119
         },
         {
-          "excess_return": 0.004422698342737563,
+          "excess_return": 0.004950724768311376,
           "id": "minvol",
           "label": "USMV (MSCI USA Min Vol, factor proxy; NOT buyable by UK retail: no KID/PRIIPs)",
           "max_dd": -0.006023059551371945,
-          "return_since_start": 0.011953947819586253,
+          "return_since_start": 0.01142592139401244,
           "ticker": "USMV",
-          "value_gbp": 10119.539478195862
+          "value_gbp": 10114.259213940124
         }
       ],
       "capital_gbp": 10000.0,
@@ -593,8 +593,8 @@
       "status": "active",
       "target_weeks": 26,
       "value_gbp": 10163.766461623238,
-      "vs_minvol": 0.004422698342737563,
-      "vs_spy": 0.028838608058041282,
+      "vs_minvol": 0.004950724768311376,
+      "vs_spy": 0.02935389453081194,
       "weeks_tracked": 2
     }
   ],
