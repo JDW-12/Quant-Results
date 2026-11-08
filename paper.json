@@ -26,12 +26,12 @@
   "capital_gbp": 10000.0,
   "currency": "GBP",
   "free_data": true,
-  "generated_at": "2026-11-07T01:16:02.423817+00:00",
+  "generated_at": "2026-11-08T01:15:42.774729+00:00",
   "live_data": {
     "failures": {},
     "last_date": "2026-11-06",
     "n_tickers": 506,
-    "refreshed_at": "2026-11-07T01:15:33+00:00"
+    "refreshed_at": "2026-11-08T01:15:12+00:00"
   },
   "note": "Paper portfolios start with a notional GBP 10,000 on their start date and are filled at the next open after each Friday-close signal with full costs (fees, spread, FX per trade, 15% US dividend withholding; ETF TERs are already inside the NAV-based prices). Simulated only: no broker connection exists. Watch portfolios (e.g. provisional experiments) are tracking only: their Gate 3 / kill-rule results are informational and never change a registry stage.",
   "portfolios": [
@@ -39,7 +39,7 @@
       "backtest_max_dd": -0.20588589626556686,
       "benchmarks": [
         {
-          "excess_return": 0.04134803041526658,
+          "excess_return": 0.03757596911473715,
           "id": "spy",
           "label": "SPY (S&P 500, USD)",
           "max_dd": -0.021279251509527808,
@@ -48,7 +48,7 @@
           "value_gbp": 9818.568590230418
         },
         {
-          "excess_return": 0.01707258228237518,
+          "excess_return": 0.013300520981845754,
           "id": "minvol",
           "label": "USMV (MSCI USA Min Vol, factor proxy; NOT buyable by UK retail: no KID/PRIIPs)",
           "max_dd": -0.012672879743661936,
@@ -59,13 +59,13 @@
       ],
       "capital_gbp": 10000.0,
       "costs_gbp": {
-        "fees": 1.2784423615263825,
-        "fx": 9.588317711447868,
-        "spread": 3.6468387876874364,
+        "fees": 1.2804410470359329,
+        "fx": 9.603307852769497,
+        "spread": 3.652540166224295,
         "ter": 0.0,
-        "withholding": 0.8496936305926335
+        "withholding": 1.276574616729078
       },
-      "current_dd": -0.0061106859618645926,
+      "current_dd": -0.009774674921642745,
       "drawdown_limit": -0.3088288443983503,
       "equity": {
         "benchmarks": {
@@ -84,7 +84,8 @@
             10114.259213940124,
             10095.981805289264,
             10077.704160264011,
-            10045.617998157764
+            10045.617998157764,
+            10061.323071559333
           ],
           "spy": [
             10000.0,
@@ -101,7 +102,8 @@
             9870.227516315119,
             9852.391095676026,
             9834.554444365664,
-            9803.242440845175
+            9803.242440845175,
+            9818.568590230418
           ]
         },
         "dates": [
@@ -119,7 +121,8 @@
           "2026-11-02",
           "2026-11-03",
           "2026-11-04",
-          "2026-11-05"
+          "2026-11-05",
+          "2026-11-06"
         ],
         "strategy": [
           10000.0,
@@ -136,10 +139,21 @@
           10240.6622253812,
           10178.633786570386,
           10294.958150632136,
-          10232.048894383084
+          10232.048894383084,
+          10194.32828137779
         ]
       },
       "events": [
+        {
+          "date": "2026-11-06",
+          "message": "kill rules (informational): none would trigger",
+          "type": "kill_info"
+        },
+        {
+          "date": "2026-11-06",
+          "message": "Gate 3 (informational, watch portfolio): pending (3/13 weeks)",
+          "type": "gate3_info"
+        },
         {
           "date": "2026-10-30",
           "message": "kill rules (informational): none would trigger",
@@ -183,16 +197,16 @@
           {
             "name": "min_weeks",
             "pass": false,
-            "reason": "only 2 paper weeks",
+            "reason": "only 3 paper weeks",
             "threshold": ">= 13",
-            "value": 2.0
+            "value": 3.0
           },
           {
             "name": "live_not_below_backtest",
             "pass": true,
             "reason": null,
             "threshold": "one-sided p >= 0.05",
-            "value": 0.8033581588582548
+            "value": 0.9028996614438539
           },
           {
             "name": "turnover_within_tolerance",
@@ -204,21 +218,21 @@
           {
             "name": "costs_within_tolerance",
             "pass": false,
-            "reason": "live 0.001675 vs backtest 0.01083: deviation 84.5%",
+            "reason": "live 0.002203 vs backtest 0.01083: deviation 79.7%",
             "threshold": "|live / backtest - 1| <= 0.5",
-            "value": 0.8452831113623074
+            "value": 0.796560729279589
           }
         ],
         "informational": true,
-        "label": "pending (2/13 weeks)",
-        "live_active_mean_weekly": 0.016696920179462005,
-        "live_cost_drag_annual": 0.0016751675726918343,
+        "label": "pending (3/13 weeks)",
+        "live_active_mean_weekly": 0.014068111851260815,
+        "live_cost_drag_annual": 0.0022026998624627356,
         "live_turnover_annual": 0.0,
         "official": null,
-        "p_value": 0.8033581588582548,
+        "p_value": 0.9028996614438539,
         "passed": null,
         "status": "pending",
-        "t_stat": 1.407369140784731
+        "t_stat": 1.9243398926480257
       },
       "id": "P-0001",
       "kill": {
@@ -228,7 +242,7 @@
       },
       "kind": "watch",
       "label": "Low vol 252d, 25 names, 4-weekly (watch, provisional)",
-      "last_mark_date": "2026-11-05",
+      "last_mark_date": "2026-11-06",
       "live_vs_backtest": {
         "backtest": {
           "ann_return": 0.11452160257836352,
@@ -236,9 +250,9 @@
           "sharpe": 0.9686414497236084
         },
         "live": {
-          "ann_return": 1.4280703215355381,
-          "ann_vol": 0.12778998681342785,
-          "sharpe": 6.6982208326223365
+          "ann_return": 1.073284543497294,
+          "ann_vol": 0.12832515273439069,
+          "sharpe": 5.436359806148422
         }
       },
       "max_dd": -0.012197559075967868,
@@ -246,128 +260,128 @@
       "positions": [
         {
           "ticker": "BRK-B",
-          "value_gbp": 530.9803618438131,
-          "weight": 0.05189384524298905
+          "value_gbp": 530.4724296798288,
+          "weight": 0.052036035630602044
         },
         {
           "ticker": "AFL",
-          "value_gbp": 521.3614476781787,
-          "weight": 0.050953768210038726
+          "value_gbp": 513.1592229727721,
+          "weight": 0.050337718073114414
         },
         {
           "ticker": "L",
-          "value_gbp": 498.2545486008426,
-          "weight": 0.04869548159356051
+          "value_gbp": 492.65695142576715,
+          "weight": 0.0483265731520256
         },
         {
           "ticker": "KIM",
-          "value_gbp": 460.0120843372642,
-          "weight": 0.044957963853142775
+          "value_gbp": 458.75389186092366,
+          "weight": 0.0450008945365179
         },
         {
           "ticker": "SPG",
-          "value_gbp": 454.1386713298834,
-          "weight": 0.04438394265093712
-        },
-        {
-          "ticker": "VICI",
-          "value_gbp": 439.9479561434555,
-          "weight": 0.04299705373622348
-        },
-        {
-          "ticker": "O",
-          "value_gbp": 439.01507040323105,
-          "weight": 0.04290588081964989
+          "value_gbp": 458.60308464306246,
+          "weight": 0.04498610128936137
         },
         {
           "ticker": "FRT",
-          "value_gbp": 438.8207080652508,
-          "weight": 0.04288688537308914
+          "value_gbp": 436.9451749456808,
+          "weight": 0.0428615954759725
+        },
+        {
+          "ticker": "O",
+          "value_gbp": 436.30205029861935,
+          "weight": 0.04279850896067593
+        },
+        {
+          "ticker": "VICI",
+          "value_gbp": 433.29477552009604,
+          "weight": 0.042503514067876884
         },
         {
           "ticker": "REG",
-          "value_gbp": 428.28548606102544,
-          "weight": 0.04185725561731181
-        },
-        {
-          "ticker": "WEC",
-          "value_gbp": 167.72071221302988,
-          "weight": 0.01639170355265803
-        },
-        {
-          "ticker": "ED",
-          "value_gbp": 166.9679796952498,
-          "weight": 0.016318137395425016
+          "value_gbp": 420.8573075128994,
+          "weight": 0.041283476056160465
         },
         {
           "ticker": "LNT",
-          "value_gbp": 166.77590533332955,
-          "weight": 0.016299365557653045
-        },
-        {
-          "ticker": "DUK",
-          "value_gbp": 165.20336596524325,
-          "weight": 0.016145677925359814
+          "value_gbp": 165.28529173737235,
+          "weight": 0.016213455872252293
         },
         {
           "ticker": "AEE",
-          "value_gbp": 164.368144655895,
-          "weight": 0.016064049962283257
+          "value_gbp": 164.68348765416886,
+          "weight": 0.016154422646463124
+        },
+        {
+          "ticker": "WEC",
+          "value_gbp": 164.50457878190295,
+          "weight": 0.0161368728023412
+        },
+        {
+          "ticker": "ED",
+          "value_gbp": 163.2631012505731,
+          "weight": 0.016015091602338282
+        },
+        {
+          "ticker": "DUK",
+          "value_gbp": 162.5360391315291,
+          "weight": 0.015943771344742487
         },
         {
           "ticker": "EVRG",
-          "value_gbp": 161.24042993469732,
-          "weight": 0.015758371719979833
-        },
-        {
-          "ticker": "ATO",
-          "value_gbp": 161.13562624526816,
-          "weight": 0.015748129031490855
-        },
-        {
-          "ticker": "NI",
-          "value_gbp": 161.0752137225867,
-          "weight": 0.01574222478657324
+          "value_gbp": 161.73268296257515,
+          "weight": 0.01586496711686398
         },
         {
           "ticker": "DTE",
-          "value_gbp": 160.4768489470937,
-          "weight": 0.015683745318612382
+          "value_gbp": 160.9780044499613,
+          "weight": 0.01579093786336305
         },
         {
-          "ticker": "CMS",
-          "value_gbp": 158.54910601985245,
-          "weight": 0.015495342883563475
+          "ticker": "NI",
+          "value_gbp": 160.27428108464167,
+          "weight": 0.015721906991892576
         },
         {
-          "ticker": "SO",
-          "value_gbp": 158.0966103138143,
-          "weight": 0.01545111951142082
-        },
-        {
-          "ticker": "PEG",
-          "value_gbp": 157.62654748062465,
-          "weight": 0.015405179266408144
-        },
-        {
-          "ticker": "PPL",
-          "value_gbp": 157.5989172957665,
-          "weight": 0.015402478909407963
-        },
-        {
-          "ticker": "FE",
-          "value_gbp": 157.40182258544678,
-          "weight": 0.015383216422260551
+          "ticker": "ATO",
+          "value_gbp": 159.74600101359783,
+          "weight": 0.015670086012965607
         },
         {
           "ticker": "PNW",
-          "value_gbp": 156.42418427348585,
-          "weight": 0.01528766974123388
+          "value_gbp": 157.257202758902,
+          "weight": 0.015425950432277848
+        },
+        {
+          "ticker": "PPL",
+          "value_gbp": 156.96838188880014,
+          "weight": 0.015397618906930614
+        },
+        {
+          "ticker": "FE",
+          "value_gbp": 156.95491247114722,
+          "weight": 0.015396297641097189
+        },
+        {
+          "ticker": "PEG",
+          "value_gbp": 156.81473588669965,
+          "weight": 0.015382547192751943
+        },
+        {
+          "ticker": "CMS",
+          "value_gbp": 156.69055595402978,
+          "weight": 0.015370365916139857
+        },
+        {
+          "ticker": "SO",
+          "value_gbp": 156.64735534955548,
+          "weight": 0.015366128206377928
         },
         {
           "ticker": "CNP",
-          "value_gbp": 151.7605075741362,
-          "weight": 0.014831878653105892
+          "value_gbp": 154.62169035089113,
+          "weight": 0.01516742310852811
         }
       ],
       "provisional": true,
@@ -599,7 +613,7 @@
           "ticker": "AEE"
         }
       ],
-      "return_since_start": 0.02320488943830834,
+      "return_since_start": 0.019432828137778912,
       "rolling_ar": null,
       "rolling_beta": null,
       "rolling_ir": null,
@@ -608,10 +622,10 @@
       "start_date": "2026-10-13",
       "status": "active",
       "target_weeks": 26,
-      "value_gbp": 10232.048894383084,
-      "vs_minvol": 0.01707258228237518,
-      "vs_spy": 0.04134803041526658,
-      "weeks_tracked": 2
+      "value_gbp": 10194.32828137779,
+      "vs_minvol": 0.013300520981845754,
+      "vs_spy": 0.03757596911473715,
+      "weeks_tracked": 3
     }
   ],
   "schema_version": 1,
