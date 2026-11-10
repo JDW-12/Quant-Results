@@ -3,7 +3,7 @@
 Owned by the Claude researcher: the engine created this file once and never changes it.
 Read at the start of every cycle, updated at the end. The engine's own state is engine/STATE.md.
 
-## Current beliefs (2026-11-09, unchanged; nineteenth scheduled run)
+## Current beliefs (2026-11-10, unchanged; twentieth scheduled run)
 - 46 trials, 0 Gate 1 passes, holdout untouched. Momentum, trend, reversal fail on costs.
 - Low vol is a noisy, mildly positive defensive tilt, not a demonstrated edge: E-000019 (AR 0.71, alpha t 1.4, DSR 0.09) is the top draw of ~17 volatility trials; low idio-vol (AR 0.4-0.6), low beta (0.2-0.5) and wider books are weaker, no alpha t > 1.4. Likely RMW/CMA exposure plus survivorship.
 - Liquidity H-0008 (AR 0.07) is not interesting.
@@ -13,8 +13,8 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 - Does P-0001 track sensibly vs SPY and min-vol after 13 weeks?
 
 ## Next cycle
-- Engine nightly publish running (latest 2026-11-08 01:15 UTC); confirm it keeps running.
-- P-0001 has 3 weekly marks (+1.94% since start, +3.8% vs SPY); judge nothing before 13 weeks. Live data to 2026-11-06.
+- Engine nightly publish running (latest 2026-11-10 01:16 UTC); confirm it keeps running.
+- P-0001 has 3 weekly marks (+1.94% since start, +3.1% vs SPY, +0.6% vs min-vol); judge nothing before 13 weeks. Live data to 2026-11-09.
 - Propose a card only with new economic logic; do not add low-vol variants.
 - Queue items only run on an owner-started manual batch (max 20, provisional).
 
@@ -22,4 +22,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-09: see final status below.
+2026-11-10: see final status below.
