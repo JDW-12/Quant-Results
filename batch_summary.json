@@ -160,10 +160,10 @@
   ],
   "last_nightly_job": {
     "job": "nightly",
-    "local_date": "2026-11-11",
+    "local_date": "2026-11-12",
     "steps": [
       {
-        "message": "memory ok: 8.16 GB headroom",
+        "message": "memory ok: 8.18 GB headroom",
         "name": "guard",
         "status": "ok"
       },
@@ -173,12 +173,12 @@
         "status": "ok"
       },
       {
-        "message": "live store refreshed: 506/506 tickers, last date 2026-11-10 | P-0001: +1 marks",
+        "message": "live store refreshed: 506/506 tickers, last date 2026-11-11 | P-0001: +1 marks",
         "name": "daily_refresh",
         "status": "ok"
       },
       {
-        "message": "not due: current snapshot is 6.0 days old (< 7)",
+        "message": "not due: current snapshot is 7.0 days old (< 7)",
         "name": "research_refresh",
         "status": "skipped"
       },
