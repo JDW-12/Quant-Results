@@ -13,7 +13,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 - Does P-0001 track sensibly vs SPY and min-vol after 13 weeks?
 
 ## Next cycle
-- Engine nightly publish running (latest 2026-11-12 01:15 UTC); confirm it keeps running.
+- Engine nightly publish running (latest 2026-11-12 01:15 UTC, checked again in the second run today); confirm the 2026-11-13 publish lands.
 - P-0001 has 3 weekly marks (+3.02% since start, +4.0% vs SPY, +1.6% vs min-vol); judge nothing before 13 weeks. Live data to 2026-11-11.
 - Propose a card only with new economic logic; do not add low-vol variants.
 - Queue items only run on an owner-started manual batch (max 20, provisional).
@@ -22,4 +22,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-12: see final status below.
+2026-11-12 (second run): attempted after push; result in the run's final message.
