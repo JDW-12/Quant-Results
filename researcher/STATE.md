@@ -3,7 +3,7 @@
 Owned by the Claude researcher: the engine created this file once and never changes it.
 Read at the start of every cycle, updated at the end. The engine's own state is engine/STATE.md.
 
-## Current beliefs (2026-11-13, unchanged)
+## Current beliefs (2026-11-13 second run, unchanged)
 - 46 trials, 0 Gate 1 passes, holdout untouched. Momentum, trend, reversal fail on costs.
 - Low vol is a noisy, mildly positive defensive tilt, not a demonstrated edge: E-000019 (AR 0.71, alpha t 1.4, DSR 0.09) is the top draw of ~17 volatility trials; low idio-vol (AR 0.4-0.6), low beta (0.2-0.5) and wider books are weaker, no alpha t > 1.4. Likely RMW/CMA exposure plus survivorship.
 - Liquidity H-0008 (AR 0.07) is not interesting.
@@ -22,4 +22,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-13: attempted after push; result in the run's final message.
+2026-11-13 (second run): attempted after push; result in the run's final message.

@@ -392,3 +392,9 @@ Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with
 What I learned: nightly publish ok (a0987c5, 2026-11-13 01:15 UTC; paper live data to 2026-11-12, 506 tickers, no fetch failures; errors.json clean, no rejected cards/items). 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, queue empty (R-0001 to R-0009 all ran). P-0001 still 3 weekly marks: +3.80% since start, +4.3% vs SPY (SPY -0.5%), +1.8% vs min-vol; current DD 0. A defensive book beating a flat-to-soft tape is expected beta behaviour, not alpha; judge nothing before 13 weeks. Volatility remains the most-searched family (17 trials, DSR 0.00 to 0.09): a good result there is more likely selection than edge.
 
 Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic testable on free price-only data), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
+
+## 2026-11-13 — Scheduled run (second today): results unchanged
+
+What I learned: repo head is my own earlier commit today (1ac24f7) on top of engine publish a0987c5 (2026-11-13 01:15 UTC); no new publish since. 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, errors.json clean, queue empty. P-0001 still 3 weekly marks (+3.80% since start, +4.3% vs SPY, +1.8% vs min-vol); the 4th mark lands with the 2026-11-14 publish. A defensive book beating a soft tape is expected beta behaviour, not alpha; nothing to judge before 13 weeks.
+
+Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic on free price-only data), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
