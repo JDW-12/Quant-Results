@@ -398,3 +398,9 @@ Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with
 What I learned: repo head is my own earlier commit today (1ac24f7) on top of engine publish a0987c5 (2026-11-13 01:15 UTC); no new publish since. 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, errors.json clean, queue empty. P-0001 still 3 weekly marks (+3.80% since start, +4.3% vs SPY, +1.8% vs min-vol); the 4th mark lands with the 2026-11-14 publish. A defensive book beating a soft tape is expected beta behaviour, not alpha; nothing to judge before 13 weeks.
 
 Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic on free price-only data), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
+
+## 2026-11-14 — Scheduled run: results unchanged
+
+What I learned: nightly publish ok (881936c, 2026-11-14 01:15 UTC; live store 506/506 tickers to 2026-11-13; research snapshot dd19e9486ea87ba2 not due for refresh; errors.json clean, no rejected cards/items). 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, queue empty (R-0001 to R-0009 all ran). P-0001: +4.18% since start, +4.3% vs SPY (SPY -0.1%), +1.9% vs min-vol, max DD -1.2%, current DD 0. Last mark is 2026-11-12 and weeks_tracked is still 3: the Friday 2026-11-13 weekly mark did not land in this publish. Earlier weekly events were written on the Sunday publish (the 2026-11-06 week landed 2026-11-08), so I expect it on 2026-11-15; if not, it is an engine issue to flag. The book is 9 REITs/insurers plus 16 utilities: a rate-sensitive defensive bet, so recent outperformance is sector/beta, not alpha. Judge nothing before 13 weeks.
+
+Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic testable on free price-only data), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
