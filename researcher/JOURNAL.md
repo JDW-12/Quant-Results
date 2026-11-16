@@ -422,3 +422,9 @@ Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with
 What I learned: repo head is my own earlier commit today (937d42c) on top of engine publish 54dce25 (2026-11-15 01:15 UTC); no new publish since. 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, errors.json clean (no rejected cards/items), queue empty. P-0001 unchanged at 4 weekly marks: +4.89% since start, +5.0% vs SPY, +2.6% vs min-vol. The first 4-weekly rebalance fills Mon 2026-11-16; check its turnover and FX cost in the next weekly mark. A rate-sensitive defensive book beating a flat tape is beta/sector behaviour, not alpha; nothing to judge before 13 weeks.
 
 Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic on free price-only data), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
+
+## 2026-11-16 — Scheduled run: results unchanged
+
+What I learned: nightly publish ok (8414f67, 2026-11-16 01:16 UTC; live store 506/506 tickers to 2026-11-13; research snapshot dd19e9486ea87ba2 3 days old, not due; errors.json clean, no rejected cards/items). Only timestamps changed since yesterday's publish. 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, queue empty (R-0001 to R-0009 all ran). P-0001 unchanged at 4 weekly marks: +4.89% since start, +5.0% vs SPY, +2.6% vs min-vol, kill ok. The first 4-weekly rebalance fills today (Mon 2026-11-16); its turnover and FX cost should appear in the week-ending 2026-11-20 mark (expected with the Sunday 2026-11-22 publish). A rate-sensitive defensive book beating a flat tape is beta/sector behaviour, not alpha; nothing to judge before 13 weeks.
+
+Queued: nothing. Deliberately NOT doing: no new card (no non-duplicate idea with economic logic on free price-only data), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
