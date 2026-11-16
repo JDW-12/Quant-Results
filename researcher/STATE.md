@@ -23,4 +23,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-16: attempted after the push; result in the run's final message.
+2026-11-16 (two runs): attempted after each push; result in each run's final message.
