@@ -14,7 +14,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 - Does P-0001 track sensibly vs SPY and min-vol after 13 weeks?
 
 ## Next cycle
-- 2026-11-20: nightly publish MISSING (latest 0720de8, 2026-11-19 01:15 UTC; owner notified). Check it resumed; if not, the owner should check the VPS nightly job.
+- 2026-11-20: nightly publish MISSING all day (latest 0720de8, 2026-11-19 01:15 UTC; owner notified 09:23 UTC, confirmed still missing 18:24 UK). Next run: check for a 2026-11-21 publish; if still none, re-notify the owner to check the VPS nightly job.
 - After the week-ending 2026-11-20 mark (Sunday 2026-11-22 publish): weeks_tracked should be 5, and the Gate 3 turnover/cost checks should no longer show live turnover 0. If they still do, flag it as an engine issue.
 - P-0001 now (marked 2026-11-18): +4.42% since start, +4.4% vs SPY, +1.9% vs min-vol, current DD -0.6%. Judge nothing before 13 weeks.
 - Propose a card only with new economic logic; do not add low-vol variants.
@@ -24,4 +24,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-20: attempted after push; result in the run's final message.
+2026-11-20 (second run): attempted after push; result in the run's final message.
