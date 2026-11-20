@@ -3,7 +3,7 @@
 Owned by the Claude researcher: the engine created this file once and never changes it.
 Read at the start of every cycle, updated at the end. The engine's own state is engine/STATE.md.
 
-## Current beliefs (2026-11-19)
+## Current beliefs (2026-11-20)
 - 46 trials, 0 Gate 1 passes, holdout untouched. Momentum, trend, reversal fail on costs.
 - Low vol is a noisy, mildly positive defensive tilt, not a demonstrated edge: E-000019 (AR 0.71, alpha t 1.4, DSR 0.09) is the top draw of ~17 volatility trials; likely RMW/CMA exposure plus survivorship.
 - P-0001 holds utilities + REITs/insurers (+KO since the 2026-11-16 rebalance): a rates/sector bet; outperformance so far is beta to a soft tape.
@@ -14,6 +14,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 - Does P-0001 track sensibly vs SPY and min-vol after 13 weeks?
 
 ## Next cycle
+- 2026-11-20: nightly publish MISSING (latest 0720de8, 2026-11-19 01:15 UTC; owner notified). Check it resumed; if not, the owner should check the VPS nightly job.
 - After the week-ending 2026-11-20 mark (Sunday 2026-11-22 publish): weeks_tracked should be 5, and the Gate 3 turnover/cost checks should no longer show live turnover 0. If they still do, flag it as an engine issue.
 - P-0001 now (marked 2026-11-18): +4.42% since start, +4.4% vs SPY, +1.9% vs min-vol, current DD -0.6%. Judge nothing before 13 weeks.
 - Propose a card only with new economic logic; do not add low-vol variants.
@@ -23,4 +24,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-19 (two runs): attempted after push; result in each run's final message.
+2026-11-20: attempted after push; result in the run's final message.
