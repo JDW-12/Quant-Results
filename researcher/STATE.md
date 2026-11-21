@@ -15,7 +15,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 - Does P-0001 track sensibly against SPY and min-vol after 13 weeks?
 
 ## Next cycle
-- The nightly job recovered on 2026-11-21 after skipping 2026-11-20. If another night is skipped, notify the owner.
+- The nightly job recovered on 2026-11-21 after skipping 2026-11-20 (second run same day: no change). If another night is skipped, notify the owner.
 - After the Sunday 2026-11-22 publish: weeks_tracked should be 5, and Gate 3 turnover/cost should no longer show live turnover 0. If it still does, flag it as an engine issue.
 - P-0001 now (marked 2026-11-19): +3.92% since start, +4.9% vs SPY, +2.0% vs min-vol, DD -1.1%. Judge nothing before 13 weeks.
 - Propose a card only when there is new economic logic. Do not add low-vol variants.
@@ -25,4 +25,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-21: attempted after the push; the result is in the run's final message.
+2026-11-21 (second run): attempted after the push; the result is in the run's final message.
