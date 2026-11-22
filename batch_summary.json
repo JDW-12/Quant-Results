@@ -160,10 +160,10 @@
   ],
   "last_nightly_job": {
     "job": "nightly",
-    "local_date": "2026-11-21",
+    "local_date": "2026-11-22",
     "steps": [
       {
-        "message": "memory ok: 8.17 GB headroom",
+        "message": "memory ok: 8.65 GB headroom",
         "name": "guard",
         "status": "ok"
       },
@@ -173,19 +173,14 @@
         "status": "ok"
       },
       {
-        "message": "live store refreshed: 506/506 tickers, last date 2026-11-20 | P-0001: +2 marks",
+        "message": "live store refreshed: 506/506 tickers, last date 2026-11-20 | P-0001: +1 marks",
         "name": "daily_refresh",
         "status": "ok"
       },
       {
-        "message": "store rebuilt (universe_mode pit_sp500); current snapshot 42834a6c738dea38",
+        "message": "not due: current snapshot is 1.0 days old (< 7)",
         "name": "research_refresh",
-        "status": "ok"
-      },
-      {
-        "message": "deleted 1 unreferenced snapshot(s), kept 4",
-        "name": "prune_snapshots",
-        "status": "ok"
+        "status": "skipped"
       },
       {
         "message": "locked (survivorship-biased data)",
