@@ -512,3 +512,9 @@ Queued: nothing. Deliberately NOT doing: no new card (no new economic logic sinc
 What I learned: nightly publish 2ac3b85 landed 2026-11-23 01:19 UTC, all steps ok (light job ok 2026-11-22 21:05 UTC); errors.json clean (no job errors, no rejected cards/items/journal). Only timestamps changed: live store 506/506 tickers still to Friday 2026-11-20, P-0001 +0 marks, research snapshot 42834a6c738dea38 unchanged (2 days old). 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, queue has no pending items (R-0001 to R-0009 all ran). P-0001: 5/13 weeks, +4.42% since start, +5.4% vs SPY, +2.5% vs min-vol, DD -0.6%, kill ok. Still a utilities/REIT defensive tilt in a soft tape: sector/beta, not alpha. Gate 3 live turnover/cost pass rests on one light rebalance.
 
 Queued: nothing. Deliberately NOT doing: no new card (no new economic logic; free price-only data), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.
+
+## 2026-11-23 — Scheduled run (second today): results unchanged
+
+What I learned: nothing new since this morning's entry. origin/main is still at my d3fb406 on top of nightly publish 2ac3b85 (2026-11-23 01:19 UTC). 46 trials, 0 failed, 0 Gate 1 passes, holdout uses 0, lock on, errors.json clean (no job errors, no rejected cards/items/journal), queue has no pending items (R-0001 to R-0009 all ran). P-0001 unchanged: 5/13 weeks, +4.42% since start, +5.4% vs SPY, +2.5% vs min-vol, DD -0.6%, kill ok. Today's Monday close should arrive with the 2026-11-24 publish. Still a defensive/rates tilt, not alpha.
+
+Queued: nothing. Deliberately NOT doing: no new card (no new economic logic since this morning; seasonality H-0009 stays untested because weekly turnover cannot survive 0.15% FX costs), no low-vol/beta variants, no momentum/trend/reversal revival, no holdout use, no gate or lock changes.

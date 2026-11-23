@@ -17,6 +17,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 ## Next cycle
 - P-0001 (marked 2026-11-20, unchanged at 2026-11-23 publish): 5/13 weeks, +4.42% since start, +5.4% vs SPY, +2.5% vs min-vol, DD -0.6%, kill ok. Judge nothing before 13 weeks.
 - Next rebalance: signal about 2026-12-11, fill Mon 2026-12-14. Check turnover stays near 3x/yr once 2-3 rebalances exist.
+- Expect the 2026-11-24 publish (~01:15 UTC) to add the Monday 2026-11-23 mark.
 - If a nightly publish is skipped (normally ~01:15 UTC), notify the owner.
 - Propose a card only when there is new economic logic. Do not add low-vol variants.
 - Queue items only run when the owner starts a manual batch (max 20, provisional).
@@ -25,4 +26,4 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-23: attempted after the push; the result is in the run's final message.
+2026-11-23 (second run): attempted after the push; the result is in the run's final message.
