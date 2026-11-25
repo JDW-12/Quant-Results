@@ -26,7 +26,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-25: attempted after the push; the result is in the run's final message.
+2026-11-25 (two runs): attempted after each push; the result is in each run's final message.
 
 ## Tooling
 - In the routine container, `pip install -e quant-research` may not install numpy; run `pip install numpy` before validate_card if writing a card.
