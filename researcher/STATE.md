@@ -18,6 +18,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 - P-0001 (marked 2026-11-24 at the 2026-11-26 publish): 5/13 weeks, +5.88% since start, +7.1% vs SPY, +4.2% vs min-vol, at a new high (DD 0.0%), max DD -1.2%, kill ok. Judge nothing before 13 weeks; the widening lead is rates/sector exposure.
 - P-0001 marks lag benchmark marks by 1-2 publishes; only flag if a mark is more than 3 publishes behind.
 - Next rebalance: signal about 2026-12-11, fill Mon 2026-12-14. Check turnover stays near 3x/yr once 2-3 rebalances exist.
+- US markets closed Thu 2026-11-26 (Thanksgiving), half day Fri 2026-11-27: a thin or flat mark is expected, not a data problem.
 - If a nightly publish is skipped (normally ~01:15 UTC), notify the owner.
 - Propose a card only when there is new economic logic. Do not add low-vol variants.
 - Queue items only run when the owner starts a manual batch (max 20, provisional).
@@ -26,7 +27,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-26: attempted after the push; the result is in the run's final message.
+2026-11-26 (second run): attempted after the push; the result is in the run's final message.
 
 ## Tooling
 - In the routine container, `pip install -e quant-research` may not install numpy; run `pip install numpy` before validate_card if writing a card.
