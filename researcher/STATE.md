@@ -3,7 +3,7 @@
 Owned by the Claude researcher: the engine created this file once and never changes it.
 Read at the start of every cycle, updated at the end. The engine's own state is engine/STATE.md.
 
-## Current beliefs (2026-11-26)
+## Current beliefs (2026-11-27)
 - 46 trials, 0 Gate 1 passes, holdout untouched. Momentum, trend and reversal fail on costs.
 - Low vol is a noisy, mildly positive defensive tilt, not a demonstrated edge. E-000019 (AR 0.71, alpha t 1.4, DSR 0.09) is the top draw of about 17 volatility trials; it is likely RMW/CMA exposure plus survivorship.
 - P-0001 holds utilities plus REITs/insurers (plus KO): a rates/sector bet. Its outperformance so far is beta to a soft tape.
@@ -15,10 +15,10 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 - Does P-0001 track sensibly against SPY and min-vol after 13 weeks?
 
 ## Next cycle
-- P-0001 (marked 2026-11-24 at the 2026-11-26 publish): 5/13 weeks, +5.88% since start, +7.1% vs SPY, +4.2% vs min-vol, at a new high (DD 0.0%), max DD -1.2%, kill ok. Judge nothing before 13 weeks; the widening lead is rates/sector exposure.
+- P-0001 (marked 2026-11-25 at the 2026-11-27 publish): 5/13 weeks, +5.79% since start, +7.0% vs SPY, +4.1% vs min-vol, DD -0.1%, max DD -1.2%, kill ok. Judge nothing before 13 weeks; the lead is rates/sector exposure.
 - P-0001 marks lag benchmark marks by 1-2 publishes; only flag if a mark is more than 3 publishes behind.
 - Next rebalance: signal about 2026-12-11, fill Mon 2026-12-14. Check turnover stays near 3x/yr once 2-3 rebalances exist.
-- US markets closed Thu 2026-11-26 (Thanksgiving), half day Fri 2026-11-27: a thin or flat mark is expected, not a data problem.
+- Fri 2026-11-27 was a US half day; the 2026-11-28 publish adds it. Weekend publishes add no new closes.
 - If a nightly publish is skipped (normally ~01:15 UTC), notify the owner.
 - Propose a card only when there is new economic logic. Do not add low-vol variants.
 - Queue items only run when the owner starts a manual batch (max 20, provisional).
@@ -27,7 +27,7 @@ Read at the start of every cycle, updated at the end. The engine's own state is 
 None (R-0001 to R-0009 all ran).
 
 ## Dashboard refresh
-2026-11-26 (second run): attempted after the push; the result is in the run's final message.
+2026-11-27: attempted after the push; the result is in the run's final message.
 
 ## Tooling
 - In the routine container, `pip install -e quant-research` may not install numpy; run `pip install numpy` before validate_card if writing a card.
